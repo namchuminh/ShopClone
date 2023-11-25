@@ -93,10 +93,10 @@
 		                            	<span class="badge badge-warning"><?php echo $value['DaBan']; ?></span>
 		                            </td>
 		                            <td>
-		                            	<a class="btn btn-info" href="<?php echo base_url('admin/san-pham/nhap-clone/'.$value['MaSanPham'].'/'); ?>">Thêm Clone</a>
+		                            	<a class="btn btn-info" href="<?php echo base_url('admin/san-pham/'.$value['MaSanPham'].'/nhap-clone/'); ?>">Thêm Clone</a>
 		                            </td>
 		                            <td>
-		                            	<a class="btn btn-danger" href="<?php echo base_url('admin/san-pham/xoa-clone/'.$value['MaSanPham'].'/'); ?>">Xóa Clone</a>
+		                            	<a class="btn btn-danger" href="<?php echo base_url('admin/san-pham/'.$value['MaSanPham'].'/xoa-clone/'); ?>">Xóa Clone</a>
 		                            </td>
 		                            <td style="float: left;">
 		                            	<a class="btn btn-primary" href="<?php echo base_url('admin/san-pham/sua/'.$value['MaSanPham'].'/'); ?>">Cập Nhật</a>

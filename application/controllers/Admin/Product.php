@@ -161,6 +161,73 @@ class Product extends CI_Controller {
 		return redirect(base_url('admin/san-pham/'));
 	}
 
+	public function importClone($MaSanPham){
+		if(count($this->Model_Product->getById($MaSanPham)) < 1){
+			return redirect(base_url('admin/san-pham/'));
+		}
+
+		$data['title'] = "Nhập Clone vào sản phẩm";
+		$data['detail'] = $this->Model_Product->getById($MaSanPham);
+		if ($this->input->server('REQUEST_METHOD') === 'POST') {
+			$danhsachtaikhoan = trim($this->input->post('danhsach'));
+
+			if(count($this->Model_Product->getAllCloneById($MaSanPham)) < 1){
+				$this->Model_Product->insertClone($danhsachtaikhoan, $MaSanPham);
+			}else{
+				$danhsach = $this->Model_Product->getAllCloneById($MaSanPham)[0]['DanhSachTaiKhoan']."\n".$danhsachtaikhoan;
+				if($this->Model_Product->getAllCloneById($MaSanPham)[0]['DanhSachTaiKhoan'] == ""){
+					$danhsach = $danhsachtaikhoan;
+				}		
+				$this->Model_Product->importClone($danhsach, $MaSanPham);
+			}
+
+			$data['success'] = "Thêm danh sách Clone thành công!";
+			return $this->load->view('Admin/Product/View_ImportClone', $data);
+		}
+		return $this->load->view('Admin/Product/View_ImportClone', $data);
+	}
+
+	public function deleteClone($MaSanPham){
+		if(count($this->Model_Product->getById($MaSanPham)) < 1){
+			return redirect(base_url('admin/san-pham/'));
+		}
+
+		if(count($this->Model_Product->getAllCloneById($MaSanPham)) < 1){
+			return redirect(base_url('admin/san-pham/'));
+		}
+
+		$data['title'] = "Xóa Clone khỏi sản phẩm";
+		$data['detail'] = $this->Model_Product->getById($MaSanPham);
+		if ($this->input->server('REQUEST_METHOD') === 'POST') {
+			$danhsach = $this->Model_Product->getAllCloneById($MaSanPham)[0]['DanhSachTaiKhoan'];
+			$danhsach = explode("\n", $danhsach);
+
+			$danhsachxoa = trim($this->input->post('danhsach'));
+			$danhsachxoa = explode("\n", $danhsachxoa);
+
+			$valuesToCompare = array_map(function ($item) {
+			    return explode("|", $item)[0];
+			}, $danhsachxoa);
+
+			$danhsach = array_filter($danhsach, function ($item) use ($valuesToCompare) {
+			    $value = explode("|", $item)[0];
+			    return !in_array($value, $valuesToCompare);
+			});
+
+			$danhsachxoa = implode("\n", $danhsach);
+
+			if(count($danhsach) < 1){
+				$danhsachxoa = "";
+			}
+
+			$this->Model_Product->importClone($danhsachxoa, $MaSanPham);
+
+			$data['success'] = "Xóa Clone thành công!";
+			return $this->load->view('Admin/Product/View_DeleteClone', $data);
+		}
+		return $this->load->view('Admin/Product/View_DeleteClone', $data);
+	}
+
 }
 
 /* End of file Product.php */

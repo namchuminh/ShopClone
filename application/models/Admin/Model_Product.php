@@ -43,9 +43,16 @@ class Model_Product extends CI_Model {
 
 	public function search($tensanpham,$machuyenmuc){
 		$tensanpham = "%".$tensanpham."%";
-		$sql = "SELECT sanpham.*, quocgia.TenQuocGia, quocgia.MaQuocGia, chuyenmuc.TenChuyenMuc, chuyenmuc.MaChuyenMuc FROM sanpham,quocgia,chuyenmuc WHERE sanpham.MaChuyenMuc = chuyenmuc.MaChuyenMuc AND sanpham.MaQuocGia = quocgia.MaQuocGia AND sanpham.TenSanPham LIKE ? AND sanpham.MaChuyenMuc = ?";
-		$result = $this->db->query($sql,array($tensanpham,$machuyenmuc));
-		return $result->result_array();
+		if(empty($machuyenmuc)){
+			$sql = "SELECT sanpham.*, quocgia.TenQuocGia, quocgia.MaQuocGia, chuyenmuc.TenChuyenMuc, chuyenmuc.MaChuyenMuc FROM sanpham,quocgia,chuyenmuc WHERE sanpham.MaChuyenMuc = chuyenmuc.MaChuyenMuc AND sanpham.MaQuocGia = quocgia.MaQuocGia AND sanpham.TenSanPham LIKE ?";
+			$result = $this->db->query($sql,array($tensanpham));
+			return $result->result_array();
+		}else{
+			$sql = "SELECT sanpham.*, quocgia.TenQuocGia, quocgia.MaQuocGia, chuyenmuc.TenChuyenMuc, chuyenmuc.MaChuyenMuc FROM sanpham,quocgia,chuyenmuc WHERE sanpham.MaChuyenMuc = chuyenmuc.MaChuyenMuc AND sanpham.MaQuocGia = quocgia.MaQuocGia AND sanpham.TenSanPham LIKE ? AND sanpham.MaChuyenMuc = ?";
+			$result = $this->db->query($sql,array($tensanpham,$machuyenmuc));
+			return $result->result_array();
+		}
+		
 	}
 
 	public function delete($Masanpham){
@@ -64,6 +71,24 @@ class Model_Product extends CI_Model {
 		$sql = "SELECT * FROM `quocgia` ORDER BY TenQuocGia ASC";
 		$result = $this->db->query($sql);
 		return $result->result_array();
+	}
+
+	public function getAllCloneById($MaSanPham){
+		$sql = "SELECT * FROM `taikhoan` WHERE MaSanPham = ?";
+		$result = $this->db->query($sql, array($MaSanPham));
+		return $result->result_array();
+	}
+
+	public function insertClone($danhsach,$MaSanPham){
+		$sql = "INSERT INTO `taikhoan` (MaSanPham,DanhSachTaiKhoan) VALUES(?,?)";
+		$result = $this->db->query($sql, array($MaSanPham,$danhsach));
+		return $result;
+	}
+
+	public function importClone($danhsach,$MaSanPham){
+		$sql = "UPDATE `taikhoan` SET `DanhSachTaiKhoan`=? WHERE `MaSanPham`=?";
+		$result = $this->db->query($sql, array($danhsach,$MaSanPham));
+		return $result;
 	}
 }
 

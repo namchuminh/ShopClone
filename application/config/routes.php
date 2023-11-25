@@ -18,6 +18,9 @@ $route['admin/san-pham/them'] = 'Admin/Product/add';
 $route['admin/san-pham/sua/(:any)'] = 'Admin/Product/update/$1';
 $route['admin/san-pham/xoa/(:any)'] = 'Admin/Product/delete/$1';
 $route['admin/san-pham/tim-kiem'] = 'Admin/Product/search';
+$route['admin/san-pham/(:any)/nhap-clone'] = 'Admin/Product/importClone/$1';
+$route['admin/san-pham/(:any)/xoa-clone'] = 'Admin/Product/deleteClone/$1';
+
 
 
 
