@@ -2972,7 +2972,7 @@ tbody tr td {
 }
 
 tbody tr td:last-child {
-    text-align: right
+    text-align: left;
 }
 
 .table>tbody>tr>td,

@@ -83,7 +83,7 @@
 		                            		<span class="badge badge-secondary">Không Hiển Thị</span>
 		                            	<?php } ?>
 		                            </td>
-		                            <td style="float: left;">
+		                            <td>
 		                            	<a class="btn btn-primary" href="<?php echo base_url('admin/chuyen-muc/sua/'.$value['MaChuyenMuc'].'/'); ?>">Cập Nhật</a>
 		                            	<a href="<?php echo base_url('admin/chuyen-muc/xoa/'.$value['MaChuyenMuc'].'/'); ?>" class="btn btn-danger" href="">Xóa</a>
 		                            </td>

@@ -48,7 +48,7 @@ class Model_Category extends CI_Model {
 
 	public function search($tenchuyenmuc,$trangthai){
 		$tenchuyenmuc = "%".$tenchuyenmuc."%";
-		$sql = "SELECT * FROM chuyenmuc WHERE TenChuyenMuc LIKE ? AND TrangThai = ?";
+		$sql = "SELECT * FROM chuyenmuc WHERE TenChuyenMuc LIKE ? OR TrangThai = ?";
 		$result = $this->db->query($sql,array($tenchuyenmuc,$trangthai));
 		return $result->result_array();
 	}

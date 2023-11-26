@@ -6,6 +6,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin/dang-nhap'] = 'Admin/Login/index';
+$route['admin/dang-xuat'] = 'Admin/Logout/index';
 
 $route['admin/chuyen-muc'] = 'Admin/Category/index';
 $route['admin/chuyen-muc/them'] = 'Admin/Category/add';
@@ -21,7 +22,10 @@ $route['admin/san-pham/tim-kiem'] = 'Admin/Product/search';
 $route['admin/san-pham/(:any)/nhap-clone'] = 'Admin/Product/importClone/$1';
 $route['admin/san-pham/(:any)/xoa-clone'] = 'Admin/Product/deleteClone/$1';
 
-
+$route['admin/nguoi-dung'] = 'Admin/User/index';
+$route['admin/nguoi-dung/sua/(:any)'] = 'Admin/User/update/$1';
+$route['admin/nguoi-dung/trang-thai/(:any)'] = 'Admin/User/changeStatus/$1';
+$route['admin/nguoi-dung/tim-kiem'] = 'Admin/User/search';
 
 
 

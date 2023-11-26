@@ -38,9 +38,10 @@ class Login extends CI_Controller {
 				    'fullname' => $this->Model_Login->getInfoByUsername($taikhoan)[0]['HoTen'],
 				    'phone' => $this->Model_Login->getInfoByUsername($taikhoan)[0]['SoDienThoai'],
 				    'email' => $this->Model_Login->getInfoByUsername($taikhoan)[0]['Email'],
-				    'fullname' => $this->Model_Login->getInfoByUsername($taikhoan)[0]['NgayThamGia'],
+				    'jointime' => $this->Model_Login->getInfoByUsername($taikhoan)[0]['NgayThamGia'],
 				);
 				$this->session->set_userdata($newdata);
+				$this->session->set_flashdata('success', 'Đăng nhập thành công!');
 				return redirect(base_url('admin/'));
 			}else{
 				$data["error"] = "Tài khoản hoặc mật khẩu không đúng!";

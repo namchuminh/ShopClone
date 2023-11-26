@@ -67,8 +67,8 @@ class Product extends CI_Controller {
 
 			$this->Model_Product->add($tensanpham,$maquocgia,$giaban,$muatoida,$muatoithieu,$machuyenmuc,$mota,$luuy);
 
-			$data['success'] = "Thêm sản phẩm thành công!";
-			return $this->load->view('Admin/Product/View_AddProduct', $data);
+			$this->session->set_flashdata('success', 'Thêm sản phẩm thành công!');
+			return redirect(base_url('admin/san-pham/'));
 
 		}
 		return $this->load->view('Admin/Product/View_AddProduct', $data);
@@ -142,6 +142,10 @@ class Product extends CI_Controller {
 	}
 
 	public function search(){
+		if ($this->input->server('REQUEST_METHOD') !== 'POST') {
+			return redirect(base_url('admin/san-pham/'));
+		}
+
 		$tensanpham = $this->input->post('tensanpham');
 		$machuyenmuc = $this->input->post('machuyenmuc');
 
@@ -158,6 +162,7 @@ class Product extends CI_Controller {
 
 	public function delete($MaSanPham){
 		$this->Model_Product->delete($MaSanPham);
+		$this->session->set_flashdata('success', 'Xóa sản phẩm thành công!');
 		return redirect(base_url('admin/san-pham/'));
 	}
 
@@ -193,6 +198,7 @@ class Product extends CI_Controller {
 		}
 
 		if(count($this->Model_Product->getAllCloneById($MaSanPham)) < 1){
+			$this->session->set_flashdata('error', 'Vui lòng thêm Clone trước khi thực hiện!');
 			return redirect(base_url('admin/san-pham/'));
 		}
 

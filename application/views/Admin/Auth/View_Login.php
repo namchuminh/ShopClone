@@ -29,7 +29,7 @@
 
 </head>
 
-<body class="bg-primary">
+<body class="bg-default">
 
     <div class="unix-login">
         <div class="container">
@@ -84,3 +84,32 @@
     </script>
 <?php } ?>
 
+<?php if(isset($_SESSION['error']) && !empty($_SESSION['error'])){ ?>
+    <script>
+        $(document).ready(function(){
+            toastr.options = {
+                closeButton: true,
+                progressBar: true,
+                positionClass: 'toast-top-right', // Vị trí hiển thị
+                timeOut: 5000 // Thời gian tự động đóng
+            };
+            toastr.error('<?php echo $_SESSION['error']; ?>', 'Thất Bại');
+        });
+    </script>
+    <?php unset($_SESSION['error']); ?>
+<?php } ?>
+
+<?php if(isset($_SESSION['success']) && !empty($_SESSION['success'])){ ?>
+    <script>
+        $(document).ready(function(){
+            toastr.options = {
+                closeButton: true,
+                progressBar: true,
+                positionClass: 'toast-top-right', // Vị trí hiển thị
+                timeOut: 5000 // Thời gian tự động đóng
+            };
+            toastr.success('<?php echo $_SESSION['success']; ?>', 'Thành Công');
+        });
+    </script>
+    <?php unset($_SESSION['success']); ?>
+<?php } ?>

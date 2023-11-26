@@ -43,8 +43,8 @@ class Category extends CI_Controller {
 
 			$this->Model_Category->add($tenchuyenmuc,$hinhanh);
 
-			$data['success'] = "Thêm chuyên mục thành công!";
-			return $this->load->view('Admin/Category/View_AddCategory', $data);
+			$this->session->set_flashdata('success', 'Thêm chuyên mục thành công!');
+			return redirect(base_url('admin/chuyen-muc/'));
 
 		}
 		return $this->load->view('Admin/Category/View_AddCategory', $data);
@@ -95,6 +95,10 @@ class Category extends CI_Controller {
 	}
 
 	public function search(){
+		if ($this->input->server('REQUEST_METHOD') !== 'POST') {
+			return redirect(base_url('admin/chuyen-muc/'));
+		}
+
 		$tenchuyenmuc = $this->input->post('tenchuyenmuc');
 		$trangthai = $this->input->post('trangthai');
 
