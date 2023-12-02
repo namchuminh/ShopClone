@@ -69,7 +69,7 @@
 	                    		<tr>
 		                            <th scope="row"><?php echo $key + 1; ?></th>
 		                            <td>
-		                            	<img src="<?php echo $value['HinhAnh']; ?>" height="65" width="65">
+		                            	<img src="<?php echo $value['HinhAnh']; ?>" height="55" width="55">
 		                            </td>
 		                            <td>
 		                            	<strong>

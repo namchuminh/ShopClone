@@ -30,5 +30,10 @@ $route['admin/nguoi-dung/(:any)/cong-tien'] = 'Admin/User/addMoney/$1';
 $route['admin/nguoi-dung/(:any)/tru-tien'] = 'Admin/User/subtractMoney/$1';
 
 
+$route['admin/khuyen-mai'] = 'Admin/Discount/index';
+$route['admin/khuyen-mai/them'] = 'Admin/Discount/add';
+$route['admin/khuyen-mai/sua/(:any)'] = 'Admin/Discount/update/$1';
+$route['admin/khuyen-mai/xoa/(:any)'] = 'Admin/Discount/delete/$1';
+
 
 

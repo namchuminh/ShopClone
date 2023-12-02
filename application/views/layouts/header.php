@@ -67,8 +67,8 @@
 
                     <li><a class="sidebar-sub-toggle"><i class="ti-receipt"></i>Khuyến Mãi <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="school-student.html">Danh Sách</a></li>
-                            <li><a href="school-student-profile.html">Thêm Mới</a></li>
+                            <li><a href="<?php echo base_url('admin/khuyen-mai/'); ?>">Danh Sách</a></li>
+                            <li><a href="<?php echo base_url('admin/khuyen-mai/them/'); ?>">Thêm Mới</a></li>
                         </ul>
                     </li>
 

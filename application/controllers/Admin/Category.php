@@ -45,7 +45,6 @@ class Category extends CI_Controller {
 
 			$this->session->set_flashdata('success', 'Thêm chuyên mục thành công!');
 			return redirect(base_url('admin/chuyen-muc/'));
-
 		}
 		return $this->load->view('Admin/Category/View_AddCategory', $data);
 	}
@@ -114,6 +113,7 @@ class Category extends CI_Controller {
 
 	public function delete($MaChuyenMuc){
 		$this->Model_Category->delete($MaChuyenMuc);
+		$this->session->set_flashdata('success', 'Xóa chuyên mục thành công!');
 		return redirect(base_url('admin/chuyen-muc/'));
 	}
 
