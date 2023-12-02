@@ -26,6 +26,8 @@ $route['admin/nguoi-dung'] = 'Admin/User/index';
 $route['admin/nguoi-dung/sua/(:any)'] = 'Admin/User/update/$1';
 $route['admin/nguoi-dung/trang-thai/(:any)'] = 'Admin/User/changeStatus/$1';
 $route['admin/nguoi-dung/tim-kiem'] = 'Admin/User/search';
+$route['admin/nguoi-dung/(:any)/cong-tien'] = 'Admin/User/addMoney/$1';
+$route['admin/nguoi-dung/(:any)/tru-tien'] = 'Admin/User/subtractMoney/$1';
 
 
 

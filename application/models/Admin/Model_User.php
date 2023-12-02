@@ -42,6 +42,29 @@ class Model_User extends CI_Model {
 		return $result->result_array();
 	}
 
+	public function updateById($hoten,$taikhoan,$sodienthoai,$email,$trangthai,$MaNguoiDung){
+		$sql = "UPDATE `nguoidung` SET HoTen = ?, taikhoan = ?, sodienthoai = ?, email = ?, trangthai = ?  WHERE MaNguoiDung = ?";
+		$result = $this->db->query($sql, array($hoten,$taikhoan,$sodienthoai,$email,$trangthai,$MaNguoiDung));
+		return $result;
+	}
+
+	public function updateMoney($sodukhadung,$MaNguoiDung){
+		$sql = "UPDATE `vitien` SET SoDuKhaDung = ? WHERE MaNguoiDung = ?";
+		$result = $this->db->query($sql, array($sodukhadung,$MaNguoiDung));
+		return $result;
+	}
+
+	public function insertCashFlow($MaNguoiDung,$SoTienTruoc,$SoTienThayDoi,$SoTienHienTai,$NoiDung){
+		$sql = "INSERT INTO `dongtien`(`MaNguoiDung`, `SoTienTruoc`, `SoTienThayDoi`, `SoTienHienTai`, `NoiDung`) VALUES (?,?,?,?,?)";
+		$result = $this->db->query($sql, array($MaNguoiDung,$SoTienTruoc,$SoTienThayDoi,$SoTienHienTai,$NoiDung));
+		return $result;
+	}
+
+	public function getCashFlowById($MaNguoiDung){
+		$sql = "SELECT * FROM dongtien WHERE MaNguoiDung = ? ORDER BY MaDongTien DESC";
+		$result = $this->db->query($sql, array($MaNguoiDung));
+		return $result->result_array();
+	}
 }
 
 /* End of file Model_User.php */
