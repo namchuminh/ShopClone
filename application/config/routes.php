@@ -35,5 +35,7 @@ $route['admin/khuyen-mai/them'] = 'Admin/Discount/add';
 $route['admin/khuyen-mai/sua/(:any)'] = 'Admin/Discount/update/$1';
 $route['admin/khuyen-mai/xoa/(:any)'] = 'Admin/Discount/delete/$1';
 
-
-
+$route['admin/don-hang'] = 'Admin/Order/index';
+$route['admin/don-hang/xem/(:any)'] = 'Admin/Order/view/$1';
+$route['admin/don-hang/tai-ve/(:any)'] = 'Admin/Order/download/$1';
+$route['admin/don-hang/tim-kiem'] = 'Admin/Order/search';
