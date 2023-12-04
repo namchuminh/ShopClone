@@ -115,8 +115,8 @@ class User extends CI_Controller {
 			return redirect(base_url('admin/nguoi-dung/'));
 		}
 
+
 		$sotiencong = $this->input->post('sotiencong');
-		$ghichu = empty($this->input->post('ghichu')) ? "Admin cộng ".number_format($sotiencong)."đ vào tài khoản!" : $this->input->post('ghichu');
 
 		if(empty($sotiencong)){
 			$this->session->set_flashdata('error', 'Vui lòng nhập số tiền cộng!');
@@ -127,6 +127,8 @@ class User extends CI_Controller {
 			$this->session->set_flashdata('error', 'Số tiền cộng không hợp lệ!');
 			return redirect(base_url('admin/nguoi-dung/sua/'.$MaNguoiDung.'/'));
 		}
+
+		$ghichu = empty($this->input->post('ghichu')) ? "Admin cộng ".number_format($sotiencong)."đ vào tài khoản!" : $this->input->post('ghichu');
 
 		$soducu = $this->Model_User->getById($MaNguoiDung)[0]['SoDuKhaDung'];
 		$sodumoi = $sotiencong + $soducu;
@@ -147,7 +149,6 @@ class User extends CI_Controller {
 		}
 
 		$sotientru = $this->input->post('sotientru');
-		$ghichu = empty($this->input->post('ghichu')) ? "Admin trừ ".number_format($sotientru)."đ khỏi tài khoản!" : $this->input->post('ghichu');
 
 		if(empty($sotientru)){
 			$this->session->set_flashdata('error', 'Vui lòng nhập số tiền trừ!');
@@ -158,6 +159,8 @@ class User extends CI_Controller {
 			$this->session->set_flashdata('error', 'Số tiền trừ không hợp lệ!');
 			return redirect(base_url('admin/nguoi-dung/sua/'.$MaNguoiDung.'/'));
 		}
+
+		$ghichu = empty($this->input->post('ghichu')) ? "Admin trừ ".number_format($sotientru)."đ khỏi tài khoản!" : $this->input->post('ghichu');
 
 		$soducu = $this->Model_User->getById($MaNguoiDung)[0]['SoDuKhaDung'];
 		$sodumoi = ($soducu - $sotientru) <= 0 ? 0 : $soducu - $sotientru;
