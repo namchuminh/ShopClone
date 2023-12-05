@@ -51,7 +51,7 @@
 	                        <tr>
 	                            <th>#</th>
 	                            <th>Mã Giao Dịch</th>
-	                            <th>Khách Hàng</th>
+	                            <th>Người Dùng</th>
 	                            <th>Tên Sản Phẩm</th>
 	                            <th>Số Lượng</th>
 	                            <th>Thanh Toán</th>

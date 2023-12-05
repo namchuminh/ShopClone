@@ -128,6 +128,11 @@ class User extends CI_Controller {
 			return redirect(base_url('admin/nguoi-dung/sua/'.$MaNguoiDung.'/'));
 		}
 
+		if($sotiencong <= 0){
+			$this->session->set_flashdata('error', 'Số tiền cộng không hợp lệ!');
+			return redirect(base_url('admin/nguoi-dung/sua/'.$MaNguoiDung.'/'));
+		}
+
 		$ghichu = empty($this->input->post('ghichu')) ? "Admin cộng ".number_format($sotiencong)."đ vào tài khoản!" : $this->input->post('ghichu');
 
 		$soducu = $this->Model_User->getById($MaNguoiDung)[0]['SoDuKhaDung'];
@@ -156,6 +161,11 @@ class User extends CI_Controller {
 		}
 
 		if (!is_numeric($sotientru)) {
+			$this->session->set_flashdata('error', 'Số tiền trừ không hợp lệ!');
+			return redirect(base_url('admin/nguoi-dung/sua/'.$MaNguoiDung.'/'));
+		}
+
+		if($sotientru <= 0){
 			$this->session->set_flashdata('error', 'Số tiền trừ không hợp lệ!');
 			return redirect(base_url('admin/nguoi-dung/sua/'.$MaNguoiDung.'/'));
 		}

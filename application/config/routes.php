@@ -39,3 +39,7 @@ $route['admin/don-hang'] = 'Admin/Order/index';
 $route['admin/don-hang/xem/(:any)'] = 'Admin/Order/view/$1';
 $route['admin/don-hang/tai-ve/(:any)'] = 'Admin/Order/download/$1';
 $route['admin/don-hang/tim-kiem'] = 'Admin/Order/search';
+
+
+$route['admin/nap-the'] = 'Admin/Card/index';
+$route['admin/ngan-hang'] = 'Admin/Bank/index';

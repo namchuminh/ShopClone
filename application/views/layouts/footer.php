@@ -26,6 +26,12 @@
 
 </html>
 
+<style type="text/css">
+    thead tr th:last-child {
+        text-align: left;
+    }
+</style>
+
 <?php if(isset($error) && !empty($error)){ ?>
     <script>
         $(document).ready(function(){

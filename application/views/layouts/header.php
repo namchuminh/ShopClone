@@ -72,7 +72,15 @@
                         </ul>
                     </li>
 
-                    <li><a href="<?php echo base_url('admin/dang-xuat/'); ?>"><i class="ti-close"></i> Đăng Xuất</a></li>
+                    <li class="label">Cấu Hình</li>
+
+                    <li><a href="<?php echo base_url('admin/nap-the/'); ?>"><i class="ti-layers-alt"></i> Thẻ Cào Siêu Rẻ</a></li>
+                    <li><a href="<?php echo base_url('admin/ngan-hang/'); ?>"><i class="ti-credit-card"></i> Ngân Hàng (VNPAY)</a></li>
+                    <li><a href="<?php echo base_url('admin/cai-dat/'); ?>"><i class="ti-settings"></i> Cài Đặt</a></li>
+
+                    <li class="label">Cá Nhân</li>
+                    <li><a href="<?php echo base_url('admin/ca-nhan/'); ?>"><i class="ti-lock"></i> Đổi Thông Tin</a></li>
+                    <li><a href="<?php echo base_url('admin/dang-xuat/'); ?>"><i class="ti-power-off"></i> Đăng Xuất</a></li>
                 </ul>
             </div>
         </div>
