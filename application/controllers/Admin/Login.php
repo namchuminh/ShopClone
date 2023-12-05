@@ -10,6 +10,7 @@ class Login extends CI_Controller {
 		}
 		$data = array();
 		$this->load->model('Admin/Model_Login');
+		$this->load->model('Admin/Model_Setting');
 	}
 
 	public function index()
@@ -68,9 +69,39 @@ class Login extends CI_Controller {
 				return $this->load->view('Admin/Auth/View_ForgotPassword', $data);
 			}
 
+			if(count($this->Model_Setting->getAll()) < 1){
+				$data['error'] = "Chức năng hiện chưa sử dụng được do chưa cài đặt tài khoản gửi mail trong hệ thống!";
+				return $this->load->view('Admin/Auth/View_ForgotPassword', $data);
+			}
 
-			//Gui mail cung cap mat khau moi
+			$hoten = $this->Model_Login->checkEmailForgetPassword($email)[0]['HoTen'];
+			$taikhoan = $this->Model_Login->checkEmailForgetPassword($email)[0]['TaiKhoan'];
+			$matkhau = substr(str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 10);
+			$this->load->library('email');
+            $this->load->library('parser');
+            $this->email->clear();
 
+            $config['protocol'] = 'smtp';
+            $config['smtp_host'] = 'ssl://smtp.googlemail.com';
+            $config['smtp_port'] = '465';
+            $config['smtp_user'] = $this->Model_Setting->getAll()[0]['TaiKhoanGmail'];
+            $config['smtp_pass'] = $this->Model_Setting->getAll()[0]['MatKhauGmail'];
+            $config['charset'] = 'utf-8';
+            $config['newline'] = "\r\n";
+            $config['wordwrap'] = TRUE;
+            $config['mailtype'] = 'html';
+            $config['validation'] = TRUE;   
+            $this->email->initialize($config);
+            $this->email->from($this->Model_Setting->getAll()[0]['TaiKhoanGmail'], 'Shop Clone 247');
+            $this->email->to($email);
+            $this->email->subject('Hệ thống Shop Clone 247 - Đặt lại mật khẩu admin!');
+            $this->email->message('Chào quản trị viên '.$hoten.'! <br>Hệ thống Shop Clone 247 đã tiếp nhận được yêu cầu đặt lại mật khẩu cho quản trị viên với email ' .$email. '<br>Chúng tôi đã đặt lại mật khẩu đăng nhập mới cho quản trị viên có thể tiếp tục đăng nhập là: <br>Tài khoản: <b>'.$taikhoan. '</b><br>Mật khẩu: <b>'.$matkhau.'</b><br><br>Vui lòng đăng nhập với thông tin trên tại địa chỉ: <a href="'.base_url('admin/dang-nhap/').'">'.base_url('admin/dang-nhap/').'</a>');
+            $this->email->send();
+
+            $this->Model_Login->updatePassword(md5($matkhau),$email,$taikhoan);
+
+            $this->session->set_flashdata('success', "Mật khẩu mới đã được gửi tới: ".$email."! Vui lòng kiểm tra!");
+			return redirect(base_url('admin/dang-nhap/'));
 		}
 
 		return $this->load->view('Admin/Auth/View_ForgotPassword',$data);
