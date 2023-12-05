@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2023 at 07:17 PM
+-- Generation Time: Dec 05, 2023 at 09:29 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -65,7 +65,11 @@ INSERT INTO `dongtien` (`MaDongTien`, `MaNguoiDung`, `SoTienTruoc`, `SoTienThayD
 (1, 1, 150000, 200000, 350000, '2023-12-02 18:11:06', 'Admin cộng tiền vào tài khoản!'),
 (2, 1, 350000, 50000, 400000, '2023-12-02 18:11:38', 'Admin cộng tiền vào tài khoản!'),
 (3, 1, 400000, 100000, 300000, '2023-12-02 18:16:50', 'Admin trừ 100,000đ khỏi tài khoản!'),
-(4, 1, 300000, 700000, 1000000, '2023-12-02 18:30:50', 'Admin cộng 700,000đ vào tài khoản!');
+(4, 1, 300000, 700000, 1000000, '2023-12-02 18:30:50', 'Admin cộng 700,000đ vào tài khoản!'),
+(5, 1, 1000000, 100000, 1100000, '2023-12-05 00:20:09', 'Admin cộng 100,000đ vào tài khoản!'),
+(6, 1, 1100000, 2000000, 0, '2023-12-05 00:20:35', 'Admin trừ 2,000,000đ khỏi tài khoản!'),
+(7, 1, 0, 1000000, 1000000, '2023-12-05 00:20:53', 'Admin cộng 1,000,000đ vào tài khoản!'),
+(8, 1, 1000000, -100000, 900000, '2023-12-05 12:53:09', 'Admin cộng -100,000đ vào tài khoản!');
 
 -- --------------------------------------------------------
 
@@ -82,16 +86,15 @@ CREATE TABLE `donhang` (
   `SoLuong` int(11) NOT NULL,
   `ThanhToan` int(11) NOT NULL,
   `MaChuyenMuc` int(11) NOT NULL,
-  `ThoiGian` datetime NOT NULL DEFAULT current_timestamp(),
-  `PhuongThucThanhToan` int(11) NOT NULL
+  `ThoiGian` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `donhang`
 --
 
-INSERT INTO `donhang` (`MaDonHang`, `MaGiaoDich`, `DanhSachClone`, `MaNguoiDung`, `MaSanPham`, `SoLuong`, `ThanhToan`, `MaChuyenMuc`, `ThoiGian`, `PhuongThucThanhToan`) VALUES
-(1, 'GHFA4234325433', '100090792949406|ottlwerlndpdpsg|locale=my_MM; sb=lDkLZO01bEPFP_2NeQjfqhD3; c_user=100090792949406; xs=48%3AWUpQu17bSqD-SQ%3A2%3A1678457303%3A-1%3A-1; fr=0TIiDReYHL2dSjhhd.AWV9HoTqcIfXUHAIPtOcX5xeG8E.BkCzmU.tB.AAA.0.0.BkCznS.AWVjzVu3o_E|fullstopted@kosay4.tk||10-03-2023 - 14:05:03\r\n100090582296979|gkdcsmsguqkcvnv|locale=bs_BA; sb=sHMJZBjJ68oPj2WRa9azh87F; c_user=100090582296979; xs=16%3A-6PfpuTOVCjacg%3A2%3A1678341107%3A-1%3A-1; fr=0X2vqj4bQXJdZOoW2.AWXbSppSD6XmfMZewH-38-NGUk4.BkCXOw.8x.AAA.0.0.BkCXPv.AWVmMCuxs88|mohockduck@reacc.me||09-03-2023 - 05:48:29\r\n100090343143111|hfgdxlpvmaafffr|locale=en_US; sb=GNEJZAQ8qBeRiwTJSbT1z0Un; c_user=100090343143111; xs=26%3AxyVmRTlC_CH7-w%3A2%3A1678365023%3A-1%3A-1; fr=0Z10IF8wqTuxVJNl3.AWUMtXxq0jNAgaHs472yAp5ta3w.BkCdEY._k.AAA.0.0.BkCdFW.AWWBY0KPdnI|kylegilmour@yt-google.com||09-03-2023 - 12:27:06\r\n100090676372871|ivzmyldkcvfrhsb|locale=en_US; sb=X6sJZCA9Scv5tJoGCZA4sFbH; c_user=100090676372871; xs=10%3AKBOZJQfFqPQOMw%3A2%3A1678355365%3A-1%3A-1; fr=0NmRk5kIAyZvr9BwN.AWX_5uRwodq_hJuvw6pKX3KuJsQ.BkCatf.H6.AAA.0.0.BkCaud.AWXetLEth94|benthebadboy2@istitutocomprensivo-cavaglia.it||09-03-2023 - 09:46:09\r\n100090582296979|gkdcsmsguqkcvnv|locale=bs_BA; sb=sHMJZBjJ68oPj2WRa9azh87F; c_user=100090582296979; xs=16%3A-6PfpuTOVCjacg%3A2%3A1678341107%3A-1%3A-1; fr=0X2vqj4bQXJdZOoW2.AWXbSppSD6XmfMZewH-38-NGUk4.BkCXOw.8x.AAA.0.0.BkCXPv.AWVmMCuxs88|mohockduck@reacc.me||09-03-2023 - 05:48:29', 1, 7, 900, 135000, 4, '2023-12-03 00:10:59', 1);
+INSERT INTO `donhang` (`MaDonHang`, `MaGiaoDich`, `DanhSachClone`, `MaNguoiDung`, `MaSanPham`, `SoLuong`, `ThanhToan`, `MaChuyenMuc`, `ThoiGian`) VALUES
+(1, 'GHFA4234325433', '100090792949406|ottlwerlndpdpsg|locale=my_MM; sb=lDkLZO01bEPFP_2NeQjfqhD3; c_user=100090792949406; xs=48%3AWUpQu17bSqD-SQ%3A2%3A1678457303%3A-1%3A-1; fr=0TIiDReYHL2dSjhhd.AWV9HoTqcIfXUHAIPtOcX5xeG8E.BkCzmU.tB.AAA.0.0.BkCznS.AWVjzVu3o_E|fullstopted@kosay4.tk||10-03-2023 - 14:05:03\r\n100090582296979|gkdcsmsguqkcvnv|locale=bs_BA; sb=sHMJZBjJ68oPj2WRa9azh87F; c_user=100090582296979; xs=16%3A-6PfpuTOVCjacg%3A2%3A1678341107%3A-1%3A-1; fr=0X2vqj4bQXJdZOoW2.AWXbSppSD6XmfMZewH-38-NGUk4.BkCXOw.8x.AAA.0.0.BkCXPv.AWVmMCuxs88|mohockduck@reacc.me||09-03-2023 - 05:48:29\r\n100090343143111|hfgdxlpvmaafffr|locale=en_US; sb=GNEJZAQ8qBeRiwTJSbT1z0Un; c_user=100090343143111; xs=26%3AxyVmRTlC_CH7-w%3A2%3A1678365023%3A-1%3A-1; fr=0Z10IF8wqTuxVJNl3.AWUMtXxq0jNAgaHs472yAp5ta3w.BkCdEY._k.AAA.0.0.BkCdFW.AWWBY0KPdnI|kylegilmour@yt-google.com||09-03-2023 - 12:27:06\r\n100090676372871|ivzmyldkcvfrhsb|locale=en_US; sb=X6sJZCA9Scv5tJoGCZA4sFbH; c_user=100090676372871; xs=10%3AKBOZJQfFqPQOMw%3A2%3A1678355365%3A-1%3A-1; fr=0NmRk5kIAyZvr9BwN.AWX_5uRwodq_hJuvw6pKX3KuJsQ.BkCatf.H6.AAA.0.0.BkCaud.AWXetLEth94|benthebadboy2@istitutocomprensivo-cavaglia.it||09-03-2023 - 09:46:09\r\n100090582296979|gkdcsmsguqkcvnv|locale=bs_BA; sb=sHMJZBjJ68oPj2WRa9azh87F; c_user=100090582296979; xs=16%3A-6PfpuTOVCjacg%3A2%3A1678341107%3A-1%3A-1; fr=0X2vqj4bQXJdZOoW2.AWXbSppSD6XmfMZewH-38-NGUk4.BkCXOw.8x.AAA.0.0.BkCXPv.AWVmMCuxs88|mohockduck@reacc.me||09-03-2023 - 05:48:29', 1, 7, 900, 135000, 4, '2023-12-03 00:10:59');
 
 -- --------------------------------------------------------
 
@@ -150,6 +153,55 @@ CREATE TABLE `nhatky` (
   `HanhDong` text NOT NULL,
   `ThoiGian` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quanlychuyenkhoan`
+--
+
+CREATE TABLE `quanlychuyenkhoan` (
+  `MaChuyenKhoan` int(11) NOT NULL,
+  `MaThanhToan` varchar(255) NOT NULL,
+  `MaNguoiDung` int(11) NOT NULL,
+  `NganHang` varchar(255) NOT NULL,
+  `LoaiThe` varchar(255) NOT NULL,
+  `SoTien` int(11) NOT NULL,
+  `NoiDung` varchar(500) NOT NULL,
+  `ThoiGian` datetime NOT NULL DEFAULT current_timestamp(),
+  `TrangThai` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `quanlychuyenkhoan`
+--
+
+INSERT INTO `quanlychuyenkhoan` (`MaChuyenKhoan`, `MaThanhToan`, `MaNguoiDung`, `NganHang`, `LoaiThe`, `SoTien`, `NoiDung`, `ThoiGian`, `TrangThai`) VALUES
+(1, 'ChuyenKhoan', 1, 'MB BANK', 'ATM', 500000, 'CHU MINH NAM chuyen khoan', '2023-12-05 15:22:20', 'Thành công');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quanlynapthe`
+--
+
+CREATE TABLE `quanlynapthe` (
+  `MaNapThe` int(11) NOT NULL,
+  `MaNguoiDung` int(11) NOT NULL,
+  `MaThanhToan` varchar(255) NOT NULL,
+  `MaThe` varchar(255) NOT NULL,
+  `SeriThe` varchar(255) NOT NULL,
+  `LoaiThe` varchar(255) NOT NULL,
+  `MenhGia` int(11) NOT NULL,
+  `ThoiGian` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `quanlynapthe`
+--
+
+INSERT INTO `quanlynapthe` (`MaNapThe`, `MaNguoiDung`, `MaThanhToan`, `MaThe`, `SeriThe`, `LoaiThe`, `MenhGia`, `ThoiGian`) VALUES
+(1, 1, 'NapThe', '664196324427', '089801001443088', 'MOBIFONE', 50000, '2023-12-05 14:37:12');
 
 -- --------------------------------------------------------
 
@@ -462,6 +514,29 @@ CREATE TABLE `taikhoan` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `thanhtoan`
+--
+
+CREATE TABLE `thanhtoan` (
+  `MaThanhToan` varchar(255) NOT NULL,
+  `TenThanhToan` varchar(255) NOT NULL,
+  `Id` text NOT NULL,
+  `IdKey` text NOT NULL,
+  `LuuY` text NOT NULL,
+  `TrangThai` int(11) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `thanhtoan`
+--
+
+INSERT INTO `thanhtoan` (`MaThanhToan`, `TenThanhToan`, `Id`, `IdKey`, `LuuY`, `TrangThai`) VALUES
+('ChuyenKhoan', 'Chuyển Khoản Ví VNPAY', '9G9J586E', 'DEMWKYTGYDEBMDSPRFWKLVTCLOHHDWNB', '<p>ABCD</p>', 0),
+('NapThe', 'Nạp Thẻ Cào', '7437662603', '09163a62272adfa074a54c3e261a6206', '<p>abcde</p>', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `vitien`
 --
 
@@ -478,7 +553,7 @@ CREATE TABLE `vitien` (
 --
 
 INSERT INTO `vitien` (`MaViTien`, `MaNguoiDung`, `SoDuKhaDung`, `DaSuDung`, `TongNap`) VALUES
-(1, 1, 1000000, 14200, 1500000);
+(1, 1, 900000, 14200, 1500000);
 
 --
 -- Indexes for dumped tables
@@ -526,6 +601,22 @@ ALTER TABLE `nhatky`
   ADD KEY `MaKhachHang` (`MaNguoiDung`);
 
 --
+-- Indexes for table `quanlychuyenkhoan`
+--
+ALTER TABLE `quanlychuyenkhoan`
+  ADD PRIMARY KEY (`MaChuyenKhoan`),
+  ADD KEY `MaThanhToan` (`MaThanhToan`,`MaNguoiDung`),
+  ADD KEY `MaNguoiDung` (`MaNguoiDung`);
+
+--
+-- Indexes for table `quanlynapthe`
+--
+ALTER TABLE `quanlynapthe`
+  ADD PRIMARY KEY (`MaNapThe`),
+  ADD KEY `MaNguoiDung` (`MaNguoiDung`,`MaThanhToan`),
+  ADD KEY `MaThanhToan` (`MaThanhToan`);
+
+--
 -- Indexes for table `quocgia`
 --
 ALTER TABLE `quocgia`
@@ -545,6 +636,12 @@ ALTER TABLE `sanpham`
 ALTER TABLE `taikhoan`
   ADD PRIMARY KEY (`MaTaiKhoan`),
   ADD KEY `MaSanPham` (`MaSanPham`);
+
+--
+-- Indexes for table `thanhtoan`
+--
+ALTER TABLE `thanhtoan`
+  ADD PRIMARY KEY (`MaThanhToan`);
 
 --
 -- Indexes for table `vitien`
@@ -567,7 +664,7 @@ ALTER TABLE `chuyenmuc`
 -- AUTO_INCREMENT for table `dongtien`
 --
 ALTER TABLE `dongtien`
-  MODIFY `MaDongTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `MaDongTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `donhang`
@@ -592,6 +689,18 @@ ALTER TABLE `nguoidung`
 --
 ALTER TABLE `nhatky`
   MODIFY `MaNhatKy` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `quanlychuyenkhoan`
+--
+ALTER TABLE `quanlychuyenkhoan`
+  MODIFY `MaChuyenKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `quanlynapthe`
+--
+ALTER TABLE `quanlynapthe`
+  MODIFY `MaNapThe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `quocgia`
@@ -640,6 +749,20 @@ ALTER TABLE `donhang`
 --
 ALTER TABLE `nhatky`
   ADD CONSTRAINT `nhatky_ibfk_1` FOREIGN KEY (`MaNguoiDung`) REFERENCES `nguoidung` (`MaNguoiDung`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `quanlychuyenkhoan`
+--
+ALTER TABLE `quanlychuyenkhoan`
+  ADD CONSTRAINT `quanlychuyenkhoan_ibfk_1` FOREIGN KEY (`MaNguoiDung`) REFERENCES `nguoidung` (`MaNguoiDung`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `quanlychuyenkhoan_ibfk_2` FOREIGN KEY (`MaThanhToan`) REFERENCES `thanhtoan` (`MaThanhToan`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `quanlynapthe`
+--
+ALTER TABLE `quanlynapthe`
+  ADD CONSTRAINT `quanlynapthe_ibfk_1` FOREIGN KEY (`MaNguoiDung`) REFERENCES `nguoidung` (`MaNguoiDung`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `quanlynapthe_ibfk_2` FOREIGN KEY (`MaThanhToan`) REFERENCES `thanhtoan` (`MaThanhToan`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `sanpham`
