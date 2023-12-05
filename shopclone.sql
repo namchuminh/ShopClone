@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2023 at 09:29 AM
+-- Generation Time: Dec 05, 2023 at 03:52 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `shopclone`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `caidat`
+--
+
+CREATE TABLE `caidat` (
+  `TenWebsite` text NOT NULL,
+  `MoTaWebsite` text NOT NULL,
+  `TuKhoa` text NOT NULL,
+  `LogoWebsite` text NOT NULL,
+  `FaviconWebsite` text NOT NULL,
+  `TaiKhoanGmail` text NOT NULL,
+  `MatKhauGmail` text NOT NULL,
+  `SoDienThoai` varchar(11) NOT NULL,
+  `Email` text NOT NULL,
+  `Facebook` text NOT NULL,
+  `Zalo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `caidat`
+--
+
+INSERT INTO `caidat` (`TenWebsite`, `MoTaWebsite`, `TuKhoa`, `LogoWebsite`, `FaviconWebsite`, `TaiKhoanGmail`, `MatKhauGmail`, `SoDienThoai`, `Email`, `Facebook`, `Zalo`) VALUES
+('Shop Clone 247', 'Cung cấp các sản phẩm nguyên liệu cho Facebook, Tiktok, Gmail và các tài khoản mạng xã hội cho các khách hàng làm dịch vụ Marketing', 'shop clone, clone shop, mua clone, web bán clone giá rẻ, sellclone, clone gia re, clone viet, mua tai khoan, taikhoan fb, shop nick fb, via fb, shop via, via gia re', 'http://localhost/ShopClone/uploads/banner_chu_4-11.jpg', 'http://localhost/ShopClone/uploads/e6b325c11718349e12cdc5d682871554.png', 'lienhe.shopclone247@gmail.com', 'mabpkfkgbxlltrsw', '0379962045', 'lienhe.shopclone247@gmail.com', 'https://www.facebook.com/namchuminhh/', 'https://zalo.me/0379962045');
 
 -- --------------------------------------------------------
 
@@ -139,7 +166,7 @@ CREATE TABLE `nguoidung` (
 --
 
 INSERT INTO `nguoidung` (`MaNguoiDung`, `HoTen`, `TaiKhoan`, `MatKhau`, `SoDienThoai`, `Email`, `NgayThamGia`, `PhanQuyen`, `TrangThai`) VALUES
-(1, 'Quản Trị Viên', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0999888999', 'admin@gmail.com', '2023-11-24 19:04:09', 1, 1);
+(1, 'Quản Trị Viên', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0379962045', 'admin@gmail.com', '2023-11-24 19:04:09', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -511,6 +538,13 @@ CREATE TABLE `taikhoan` (
   `DanhSachTaiKhoan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `taikhoan`
+--
+
+INSERT INTO `taikhoan` (`MaTaiKhoan`, `MaSanPham`, `DanhSachTaiKhoan`) VALUES
+(4, 7, '');
+
 -- --------------------------------------------------------
 
 --
@@ -718,7 +752,7 @@ ALTER TABLE `sanpham`
 -- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `MaTaiKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `MaTaiKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `vitien`

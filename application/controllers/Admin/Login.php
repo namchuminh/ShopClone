@@ -53,6 +53,28 @@ class Login extends CI_Controller {
 		return $this->load->view('Admin/Auth/View_Login',$data);
 	}
 
+	public function forgotPassword(){
+		$data['title'] = "Quên mật khẩu admin!";
+
+		if ($this->input->server('REQUEST_METHOD') === 'POST') {
+			$email = $this->input->post('email');
+			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			    $data['error'] = "Vui lòng nhập Email hợp lệ!";
+				return $this->load->view('Admin/Auth/View_ForgotPassword', $data);
+			}
+
+			if(count($this->Model_Login->checkEmailForgetPassword($email)) < 1){
+				$data['error'] = "Không tồn tại Email cho quản trị viên này!";
+				return $this->load->view('Admin/Auth/View_ForgotPassword', $data);
+			}
+
+
+			//Gui mail cung cap mat khau moi
+
+		}
+
+		return $this->load->view('Admin/Auth/View_ForgotPassword',$data);
+	}
 }
 
 /* End of file DangNhap.php */

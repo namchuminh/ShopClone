@@ -7,6 +7,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['admin/dang-nhap'] = 'Admin/Login/index';
 $route['admin/dang-xuat'] = 'Admin/Logout/index';
+$route['admin/quen-mat-khau'] = 'Admin/Login/forgotPassword';
 
 $route['admin/chuyen-muc'] = 'Admin/Category/index';
 $route['admin/chuyen-muc/them'] = 'Admin/Category/add';
@@ -45,3 +46,7 @@ $route['admin/nap-the'] = 'Admin/Card/index';
 $route['admin/ngan-hang'] = 'Admin/Bank/index';
 
 $route['admin/ca-nhan'] = 'Admin/Profile/index';
+
+$route['admin/cai-dat'] = 'Admin/Setting/index';
+
+

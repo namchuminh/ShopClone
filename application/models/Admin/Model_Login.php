@@ -20,6 +20,12 @@ class Model_Login extends CI_Model {
 		$result = $this->db->query($sql, array($taikhoan));
 		return $result->result_array();
 	}
+
+	public function checkEmailForgetPassword($email){
+		$sql = "SELECT * FROM nguoidung WHERE Email = ? AND PhanQuyen = 1";
+		$result = $this->db->query($sql, array($email));
+		return $result->result_array();
+	}
 }
 
 /* End of file DangNhap.php */

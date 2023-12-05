@@ -37,25 +37,14 @@
                 <div class="col-lg-6 col-lg-offset-3">
                     <div class="login-content">
                         <div class="login-form">
-                            <h4>ĐĂNG NHẬP - QUẢN TRỊ VIÊN</h4>
+                            <h4>QUÊN MẬT KHẨU?</h4>
                             <form method="POST">
                                 <div class="form-group">
-                                    <label>Tài khoản</label>
-                                    <input type="text" class="form-control" placeholder="Nhập tài khoản *" name="taikhoan">
+                                    <label>Nhập Email Quản Trị</label>
+                                    <input type="text" class="form-control" placeholder="Nhập email quản trị *" name="email">
                                 </div>
-                                <div class="form-group">
-                                    <label>Mật khẩu</label>
-                                    <input type="password" class="form-control" placeholder="Nhập mật khẩu *" name="matkhau">
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-										<input type="checkbox"> Nhớ mật khẩu
-									</label>
-                                    <label class="pull-right">
-										<a href="<?php echo base_url('admin/quen-mat-khau/') ?>">Quên mật khẩu?</a>
-									</label>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Đăng Nhập</button>
+                                <a style="color: blueviolet;" href="<?php echo base_url('admin/dang-nhap/') ?>">Thử Đăng Nhập Lại?</a>
+                                <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Đặt Lại Mật Khẩu</button>
                             </form>
                         </div>
                     </div>
