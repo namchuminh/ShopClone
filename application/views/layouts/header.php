@@ -79,7 +79,7 @@
                     <li><a href="<?php echo base_url('admin/cai-dat/'); ?>"><i class="ti-settings"></i> Cài Đặt</a></li>
 
                     <li class="label">Cá Nhân</li>
-                    <li><a href="<?php echo base_url('admin/ca-nhan/'); ?>"><i class="ti-lock"></i> Đổi Mật Khẩu</a></li>
+                    <li><a href="<?php echo base_url('admin/ca-nhan/'); ?>"><i class="ti-lock"></i> Đổi Thông Tin</a></li>
                     <li><a href="<?php echo base_url('admin/dang-xuat/'); ?>"><i class="ti-power-off"></i> Đăng Xuất</a></li>
                 </ul>
             </div>

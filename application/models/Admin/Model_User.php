@@ -65,6 +65,12 @@ class Model_User extends CI_Model {
 		$result = $this->db->query($sql, array($MaNguoiDung));
 		return $result->result_array();
 	}
+
+	public function updateAdmin($hoten,$taikhoan,$sodienthoai,$email,$matkhau,$manguoidung){
+		$sql = "UPDATE `nguoidung` SET HoTen = ?, taikhoan = ?, sodienthoai = ?, email = ?, matkhau = ?  WHERE MaNguoiDung = ?";
+		$result = $this->db->query($sql, array($hoten,$taikhoan,$sodienthoai,$email,$matkhau,$manguoidung));
+		return $result;
+	}
 }
 
 /* End of file Model_User.php */

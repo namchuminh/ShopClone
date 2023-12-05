@@ -43,3 +43,5 @@ $route['admin/don-hang/tim-kiem'] = 'Admin/Order/search';
 
 $route['admin/nap-the'] = 'Admin/Card/index';
 $route['admin/ngan-hang'] = 'Admin/Bank/index';
+
+$route['admin/ca-nhan'] = 'Admin/Profile/index';
