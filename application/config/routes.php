@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['default_controller'] = 'TrangChu';
+$route['default_controller'] = 'Home/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
@@ -48,5 +48,8 @@ $route['admin/ngan-hang'] = 'Admin/Bank/index';
 $route['admin/ca-nhan'] = 'Admin/Profile/index';
 
 $route['admin/cai-dat'] = 'Admin/Setting/index';
+
+$route['dang-nhap'] = 'Website/Login/index';
+$route['dang-xuat'] = 'Website/Logout/index';
 
 

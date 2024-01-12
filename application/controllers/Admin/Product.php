@@ -206,27 +206,16 @@ class Product extends CI_Controller {
 		$data['detail'] = $this->Model_Product->getById($MaSanPham);
 		if ($this->input->server('REQUEST_METHOD') === 'POST') {
 			$danhsach = $this->Model_Product->getAllCloneById($MaSanPham)[0]['DanhSachTaiKhoan'];
-			$danhsach = explode("\n", $danhsach);
+			
 
 			$danhsachxoa = trim($this->input->post('danhsach'));
 			$danhsachxoa = explode("\n", $danhsachxoa);
 
-			$valuesToCompare = array_map(function ($item) {
-			    return explode("|", $item)[0];
-			}, $danhsachxoa);
-
-			$danhsach = array_filter($danhsach, function ($item) use ($valuesToCompare) {
-			    $value = explode("|", $item)[0];
-			    return !in_array($value, $valuesToCompare);
-			});
-
-			$danhsachxoa = implode("\n", $danhsach);
-
-			if(count($danhsach) < 1){
-				$danhsachxoa = "";
+			for($i = 0; $i < count($danhsachxoa); $i++){
+				$danhsach = str_replace(trim($danhsachxoa[$i]),"\n",$danhsach);
 			}
 
-			$this->Model_Product->importClone($danhsachxoa, $MaSanPham);
+			$this->Model_Product->importClone(trim($danhsach), $MaSanPham);
 
 			$data['success'] = "Xóa Clone thành công!";
 			return $this->load->view('Admin/Product/View_DeleteClone', $data);
