@@ -20,6 +20,18 @@ class Model_Profile extends CI_Model {
 		$result = $this->db->query($sql, array($sodukhadung, $dasudung, $manguoidung));
 		return $result;
 	}
+
+	public function getInfoByUsername($taikhoan){
+		$sql = "SELECT * FROM nguoidung WHERE TaiKhoan = ?";
+		$result = $this->db->query($sql, array($taikhoan));
+		return $result->result_array();
+	}
+
+	public function update($hoten,$sodienthoai,$email,$matkhau,$manguoidung){
+		$sql = "UPDATE `nguoidung` SET HoTen = ?, sodienthoai = ?, email = ?, matkhau = ? WHERE MaNguoiDung = ?";
+		$result = $this->db->query($sql, array($hoten,$sodienthoai,$email,$matkhau,$manguoidung));
+		return $result;
+	}
 }
 
 /* End of file Model_Profile.php */

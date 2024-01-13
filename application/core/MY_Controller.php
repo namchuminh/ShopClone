@@ -22,10 +22,12 @@ class MY_Controller extends CI_Controller {
         $this->load->model('Website/Model_Category');
         $this->load->model('Website/Model_Product');
         $this->load->model('Model_Website');
+        $this->load->model('Website/Model_Order');
 
         $this->data['product'] = $this->Model_Product->getAll();
         $this->data['category'] = $this->Model_Category->getAll();
         $this->data['config'] = $this->Model_Website->getAllConfig();
+        $this->data['history'] = $this->Model_Order->getHistory();
         $this->load->vars($this->data);
     }
 }

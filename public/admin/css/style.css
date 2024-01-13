@@ -284,7 +284,8 @@
 }
 
 .timeline-title {
-    margin: 10px 0!important
+    margin: 10px 0!important;
+    line-height: 20px;
 }
 
 .timeline>li {

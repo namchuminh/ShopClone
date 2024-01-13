@@ -16,6 +16,12 @@ class Model_Product extends CI_Model {
 		return $result->result_array();
 	}
 
+	public function update($daban,$MaSanPham){
+		$sql = "UPDATE sanpham SET `DaBan` = ? WHERE MaSanPham = ?";
+		$result = $this->db->query($sql, array($daban,$MaSanPham));
+		return $result;
+	}
+
 	public function getAll(){
 		$sql = "SELECT * FROM sanpham WHERE TrangThai = 1";
 		$result = $this->db->query($sql);

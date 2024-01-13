@@ -60,3 +60,8 @@ $route['chuyen-muc/(:any)'] = 'Website/Category/index/$1';
 $route['san-pham/(:any)'] = 'Website/Product/index/$1';
 
 $route['thanh-toan/(:any)'] = 'Website/Product/pay/$1';
+
+$route['don-mua'] = 'Website/Order/index';
+$route['don-mua/(:any)'] = 'Website/Order/detail/$1';
+
+$route['ca-nhan'] = 'Website/Profile/index';

@@ -9,10 +9,28 @@ class Model_Order extends CI_Model {
 		parent::__construct();
 	}
 
+	public function getByIdUser($MaNguoiDung){
+		$sql = "SELECT * FROM donhang WHERE MaNguoiDung = ?";
+		$result = $this->db->query($sql, array($MaNguoiDung));
+		return $result->result_array();
+	}
+
+	public function getByCodePay($MaGiaoDich, $MaNguoiDung){
+		$sql = "SELECT * FROM donhang WHERE MaGiaoDich = ? AND MaNguoiDung = ?";
+		$result = $this->db->query($sql, array($MaGiaoDich, $MaNguoiDung));
+		return $result->result_array();
+	}
+
 	public function insert($magiaodich,$danhsach,$manguoidung,$masanpham,$soluong,$thanhtoan,$machuyenmuc){
 		$sql = "INSERT INTO `donhang`(`MaGiaoDich`, `DanhSachClone`, `MaNguoiDung`, `MaSanPham`, `SoLuong`, `ThanhToan`, `MaChuyenMuc`) VALUES (?, ?, ?, ?, ?, ?, ?)";
 		$result = $this->db->query($sql, array($magiaodich,$danhsach,$manguoidung,$masanpham,$soluong,$thanhtoan,$machuyenmuc));
 		return $result;
+	}
+
+	public function getHistory(){
+		$sql = "SELECT lichsumua.*, nguoidung.TaiKhoan FROM lichsumua, nguoidung WHERE lichsumua.MaNguoiDung = nguoidung.MaNguoiDung ORDER BY lichsumua.MaLichSuMua DESC LIMIT 5";
+		$result = $this->db->query($sql);
+		return $result->result_array();
 	}
 
 	public function insertHistory($manguoidung,$masanpham,$hanhdong){

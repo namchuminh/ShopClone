@@ -100,7 +100,7 @@
 </div>
 
 <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-9">
 
     	<?php foreach ($category as $key => $value): ?>
     		<?php if(count($this->Model_Product->getByCategoryId($value['MaChuyenMuc'])) >= 1){ ?>
@@ -179,12 +179,52 @@
 	    <?php endforeach ?>
     </div>
     <!-- /# column -->
-    <div class="col-lg-4">
+    <div class="col-lg-3">
        <div class="page-header">
             <div class="page-title">
                 <h1>Giao Dịch Gần Đây</h1>
             </div>
-            abce
+        </div>
+
+        <div class="card alert">
+            <div class="card-body">
+                <ul class="timeline">
+                    <?php foreach ($history as $key => $value): ?>
+                        <li>
+                            <div class="timeline-badge"><i class="ti-timer"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h5 class="timeline-title"><?php echo $value['TaiKhoan']." - ".$value['HanhDong'];  ?></h5>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        <?php 
+                                            $yourDateTime = new DateTime($value['ThoiGian']);
+
+                                            $currentDateTime = new DateTime();
+                                            $interval = $currentDateTime->diff($yourDateTime);
+
+                                            if ($interval->y > 0) {
+                                                echo $interval->y . " năm trước";
+                                            } elseif ($interval->m > 0) {
+                                                echo $interval->m . " tháng trước";
+                                            } elseif ($interval->d > 0) {
+                                                echo $interval->d . " ngày trước";
+                                            } elseif ($interval->h > 0) {
+                                                echo $interval->h . " giờ trước";
+                                            } elseif ($interval->i > 0) {
+                                                echo $interval->i . " phút trước";
+                                            } else {
+                                                echo "Vừa xong";
+                                            }
+                                        ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /# column -->

@@ -40,6 +40,11 @@ class Product extends MY_Controller {
 				return redirect(base_url('san-pham/'.$MaSanPham.'/'));
 			}
 
+			if ($soluongmua <= 0) {
+				$this->session->set_flashdata('error', 'Vui lòng nhập số lượng mua lớn hơn 0!');
+				return redirect(base_url('san-pham/'.$MaSanPham.'/'));
+			}
+
 			if($soluongmua > $this->Model_Product->getNumberProduct($MaSanPham)){
 				$this->session->set_flashdata('error', 'Vui lòng nhập số lượng mua nhỏ hơn '.$this->Model_Product->getNumberProduct($MaSanPham) .' tài khoản!');
 				return redirect(base_url('san-pham/'.$MaSanPham.'/'));
@@ -72,7 +77,9 @@ class Product extends MY_Controller {
 			$machuyenmuc = $this->Model_Product->getById($MaSanPham)[0]['MaChuyenMuc'];
 			$magiaodich = strtoupper(substr(bin2hex(random_bytes(ceil(14 / 2))), 0, 14));
 			$thanhtoan = $soluongmua * $this->Model_Product->getById($MaSanPham)[0]['GiaBan'];
-			$hanhdong = "Đã thanh toán ".number_format($thanhtoan)." VND để mua ".$soluongmua." tài khoản ".$tensanpham."!";
+			$hanhdong = "Đã mua ".$soluongmua." ".$tensanpham."!";
+			$daban = $this->Model_Product->getById($MaSanPham)[0]['DaBan'];
+			$dabanmoi = $daban + $soluongmua;
 			
 
 			$sodukhadung = $this->Model_Profile->getExcess($manguoidung)[0]['SoDuKhaDung'];
@@ -81,6 +88,7 @@ class Product extends MY_Controller {
 			$dasudungmoi = $dasudung + $thanhtoan;
 
 			$this->Model_Product->importClone(trim($danhsach), $MaSanPham);
+			$this->Model_Product->update($dabanmoi, $MaSanPham);
 			$this->Model_Order->insert($magiaodich,$danhsachmua,$manguoidung,$MaSanPham,$soluongmua,$thanhtoan,$machuyenmuc);
 			$this->Model_Order->insertHistory($manguoidung,$MaSanPham,$hanhdong);
 			$this->Model_Profile->updateWallet($sodukhadungmoi,$dasudungmoi,$manguoidung);
@@ -92,7 +100,7 @@ class Product extends MY_Controller {
 
 			$this->session->set_userdata($newdata);
 
-			$this->session->set_flashdata('success', 'Bạn đã mua thành công '.$soluongmua.' '.$tensanpham.'! Vui lòng kiểm tra trong lịch sử giao dịch!');
+			$this->session->set_flashdata('success', 'Bạn đã mua thành công '.$soluongmua.' '.$tensanpham.'! Vui lòng kiểm tra trong danh sách đã mua!');
 			return redirect(base_url('san-pham/'.$MaSanPham.'/'));
 		}else{
 			return redirect(base_url('san-pham/'.$MaSanPham.'/'));

@@ -72,15 +72,16 @@
                     <li class="label">Nạp Tiền</li>
                     <li><a href="<?php echo base_url('admin/nap-the/'); ?>" title="Nạp Từ Thẻ"><i class="ti-layers-alt"></i> Nạp Từ Thẻ</a></li>
                     <li><a href="<?php echo base_url('admin/ngan-hang/'); ?>" title="Nạp Từ Ngân Hàng"><i class="ti-credit-card"></i> Nạp Từ Ngân Hàng</a></li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-receipt" title="Lịch Sử Giao Dịch"></i>Lịch Sử Giao Dịch</a></li>
+                    <li><a class="sidebar-sub-toggle" href="<?php echo base_url('lich-su-nap/'); ?>"><i class="ti-receipt" title="Lịch Sử Giao Dịch"></i>Lịch Sử Nạp</a></li>
 
                     <li class="label">Thông Tin</li>
 
-                    <li><a href="<?php echo base_url('admin/nap-the/'); ?>" title="Top Nạp Tiền"><i class="ti-medall-alt"></i> Top Nạp Tiền</a></li>
+                    <li><a href="<?php echo base_url('admin/nap-the/'); ?>" title="Top Nạp Tiền"><i class="ti-bar-chart"></i> Top Nạp Tiền</a></li>
                     <li><a href="<?php echo base_url('admin/ngan-hang/'); ?>" title="Chính Sách"><i class="ti-bookmark-alt"></i> Chính Sách</a></li>
                     <li><a href="<?php echo base_url('admin/cai-dat/'); ?>" title="Liên Hệ"><i class="ti-headphone"></i> Liên Hệ</a></li>
 
                     <li class="label">Cá Nhân</li>
+                    <li><a href="<?php echo base_url('don-mua/'); ?>"><i class="ti-folder" title="Danh Sách Đã Mua"></i> Danh Sách Đã Mua</a></li>
                     <li><a href="<?php echo base_url('ca-nhan/'); ?>" title="Đổi Thông Tin"><i class="ti-lock"></i> Đổi Thông Tin</a></li>
                     <li><a href="<?php echo base_url('dang-xuat/'); ?>" title="Đăng Xuất"><i class="ti-power-off"></i> Đăng Xuất</a></li>
                 </ul>
