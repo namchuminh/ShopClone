@@ -230,3 +230,34 @@
     <!-- /# column -->
 </div>
 <?php require(APPPATH.'views/layouts/Website/footer.php'); ?>
+<input type="hidden" class="thoigian" value="<?php echo $history[0]['ThoiGian']; ?>">
+<script type="text/javascript">
+    function fetchData() {
+        $.ajax({
+            url: '<?php echo base_url('don-mua-realtime/'); ?>',  // Đường dẫn tới phương thức xử lý AJAX trong controller
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                var thoigian = $('.thoigian').val();
+                if(!data || (thoigian == data.ThoiGian)){
+
+                }else{
+                    $(".timeline li:last").remove();
+                    $(".timeline").prepend('<li> <div class="timeline-badge"><i class="ti-timer"></i></div> <div class="timeline-panel"> <div class="timeline-heading"> <h5 class="timeline-title">'+ data.TaiKhoan + ' - ' + data.HanhDong +'</h5> </div> <div class="timeline-body"> <p>Vừa xong</p> </div> </div> </li>');
+                    $('.thoigian').val(data.ThoiGian);
+                }
+                
+            },
+            complete: function() {
+                setTimeout(fetchData, 7000); 
+            }
+        });
+    }
+
+    $(document).ready(function(){
+        fetchData();
+    });
+</script>
+
+
+

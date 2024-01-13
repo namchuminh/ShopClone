@@ -63,5 +63,7 @@ $route['thanh-toan/(:any)'] = 'Website/Product/pay/$1';
 
 $route['don-mua'] = 'Website/Order/index';
 $route['don-mua/(:any)'] = 'Website/Order/detail/$1';
+$route['don-mua-realtime'] = 'Website/Order/realtime';
+
 
 $route['ca-nhan'] = 'Website/Profile/index';
