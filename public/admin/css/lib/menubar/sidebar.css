@@ -150,8 +150,8 @@ html.rtl .sidebar .nano-content > ul > li > a {
 .sidebar .nano-content > ul > li > ul > li.label,
 .sidebar .nano-content > ul > li > ul > li.content,
 .sidebar .nano-content > ul > li > ul > li > a {
-    padding-left: 50px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 0px;
 }
 
 html.rtl .sidebar .nano-content > ul > li > ul > li.label,

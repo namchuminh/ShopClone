@@ -19,7 +19,12 @@ class MY_Controller extends CI_Controller {
             return redirect(base_url('dang-nhap/'));
         }
 
+        $this->load->model('Website/Model_Category');
+        $this->load->model('Website/Model_Product');
         $this->load->model('Model_Website');
+
+        $this->data['product'] = $this->Model_Product->getAll();
+        $this->data['category'] = $this->Model_Category->getAll();
         $this->data['config'] = $this->Model_Website->getAllConfig();
         $this->load->vars($this->data);
     }

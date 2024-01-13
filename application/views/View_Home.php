@@ -160,9 +160,9 @@
 					                                <td class="color-primary"><?php echo number_format($value['GiaBan']); ?>đ / 1 tài khoản</td>
 					                                <td>
 					                                	<?php if($this->Model_Product->getNumberProduct($value['MaSanPham']) >= $value['MuaToiThieu']){ ?>
-					                                		<a href="#" class="btn btn-primary">Mua Ngay</a>
+					                                		<a href="<?php echo base_url('san-pham/'.$value['MaSanPham'].'/'); ?>" class="btn btn-primary">Mua Ngay</a>
 					                                	<?php }else{ ?>
-					                                		<a href="#" class="btn btn-success">Hết Hàng</a>
+					                                		<a href="<?php echo base_url('san-pham/'.$value['MaSanPham'].'/'); ?>" class="btn btn-success">Hết Hàng</a>
 					                                	<?php } ?>
 					                                </td>
 					                            </tr>
@@ -184,6 +184,7 @@
             <div class="page-title">
                 <h1>Giao Dịch Gần Đây</h1>
             </div>
+            abce
         </div>
     </div>
     <!-- /# column -->

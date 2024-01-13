@@ -53,3 +53,10 @@ $route['dang-nhap'] = 'Website/Login/index';
 $route['dang-xuat'] = 'Website/Logout/index';
 
 
+$route['chuyen-muc'] = 'Home/index';
+$route['san-pham'] = 'Home/index';
+
+$route['chuyen-muc/(:any)'] = 'Website/Category/index/$1';
+$route['san-pham/(:any)'] = 'Website/Product/index/$1';
+
+$route['thanh-toan/(:any)'] = 'Website/Product/pay/$1';

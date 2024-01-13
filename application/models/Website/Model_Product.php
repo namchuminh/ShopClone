@@ -10,12 +10,20 @@ class Model_Product extends CI_Model {
 		
 	}
 
+	public function getById($MaSanPham){
+		$sql = "SELECT * FROM sanpham WHERE MaSanPham = ? AND TrangThai = 1";
+		$result = $this->db->query($sql, array($MaSanPham));
+		return $result->result_array();
+	}
+
 	public function getAll(){
-		
+		$sql = "SELECT * FROM sanpham WHERE TrangThai = 1";
+		$result = $this->db->query($sql);
+		return $result->result_array();
 	}
 
 	public function getByCategoryId($MaChuyenMuc){
-		$sql = "SELECT * FROM sanpham WHERE MaChuyenMuc = ?";
+		$sql = "SELECT * FROM sanpham WHERE MaChuyenMuc = ? AND TrangThai = 1";
 		$result = $this->db->query($sql, array($MaChuyenMuc));
 		return $result->result_array();
 	}
@@ -42,6 +50,23 @@ class Model_Product extends CI_Model {
 		return $result->result_array();
 	}
 
+	public function getAllNation(){
+		$sql = "SELECT * FROM quocgia";
+		$result = $this->db->query($sql);
+		return $result->result_array();
+	}
+
+	public function getAllCloneById($MaSanPham){
+		$sql = "SELECT * FROM `taikhoan` WHERE MaSanPham = ?";
+		$result = $this->db->query($sql, array($MaSanPham));
+		return $result->result_array();
+	}
+
+	public function importClone($danhsach,$MaSanPham){
+		$sql = "UPDATE `taikhoan` SET `DanhSachTaiKhoan`=? WHERE `MaSanPham`=?";
+		$result = $this->db->query($sql, array($danhsach,$MaSanPham));
+		return $result;
+	}
 }
 
 /* End of file Model_Product.php */

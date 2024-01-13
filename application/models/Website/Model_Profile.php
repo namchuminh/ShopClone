@@ -15,6 +15,11 @@ class Model_Profile extends CI_Model {
 		return $result->result_array();
 	}
 
+	public function updateWallet($sodukhadung, $dasudung, $manguoidung){
+		$sql = "UPDATE `vitien` SET `SoDuKhaDung`=?,`DaSuDung`=? WHERE `MaNguoiDung`=?";
+		$result = $this->db->query($sql, array($sodukhadung, $dasudung, $manguoidung));
+		return $result;
+	}
 }
 
 /* End of file Model_Profile.php */

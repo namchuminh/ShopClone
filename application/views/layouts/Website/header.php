@@ -41,13 +41,32 @@
                     <li class="label">Hệ Thống</li>
                     <li class="active"><a href="<?php echo base_url(); ?>"><i class="ti-home"></i>Trang Chủ </a>
                     </li>
-                    <li class="label">Mua Tài Nguyên</li>
-                    <li>
-                        <a class="sidebar-sub-toggle" title="Chuyên Mục"><i class="ti-layout-column3"></i>Chuyên Mục</a>
-                    </li>
+
+                    <li class="label">Nguyên Liệu</li>
 
                     <li>
-                        <a class="sidebar-sub-toggle" title="Sản Phẩm"><i class="ti-view-list"></i>Sản Phẩm</a>
+                        <?php if(count($category) >= 1){ ?>
+                            <a class="sidebar-sub-toggle"><i class="ti-layout-column3"></i>Thể Loại <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <ul>
+                                <?php foreach ($category as $key => $value): ?>
+                                    <li><a href="<?php echo base_url('chuyen-muc/'.$value['MaChuyenMuc'].'/'); ?>"><?php echo $value['TenChuyenMuc']; ?></a></li>
+                                <?php endforeach ?>
+                            </ul>
+                        <?php }else{ ?>
+                            <a class="sidebar-sub-toggle"><i class="ti-layout-column3"></i>Chuyên Mục</a>
+                        <?php } ?>
+                    </li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="ti-view-list"></i>Sản Phẩm <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <?php if(count($product) >= 1){ ?>
+                            <ul>
+                                <?php foreach ($product as $key => $value): ?>
+                                    <li><a href="<?php echo base_url('san-pham/'.$value['MaSanPham'].'/'); ?>"><?php echo $value['TenSanPham']; ?></a></li>
+                                <?php endforeach ?>
+                            </ul>
+                        <?php }else{ ?>
+                            <a class="sidebar-sub-toggle"><i class="ti-view-list"></i>Sản Phẩm</a>
+                        <?php } ?>
                     </li>
 
                     <li class="label">Nạp Tiền</li>
@@ -72,7 +91,7 @@
 
     <div class="header">
         <div class="pull-left">
-            <div class="logo"><a href="<?php echo base_url('admin/'); ?>"><span>Shop Clone</span></a></div>
+            <div class="logo"><a href="<?php echo base_url(); ?>"><span>Shop Clone</span></a></div>
             <div class="hamburger sidebar-toggle">
                 <span class="line"></span>
                 <span class="line"></span>

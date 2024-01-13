@@ -10,11 +10,16 @@ class Model_Category extends CI_Model {
 	}
 
 	public function getAll(){
-		$sql = "SELECT * FROM chuyenmuc";
+		$sql = "SELECT * FROM chuyenmuc WHERE TrangThai = 1";
 		$result = $this->db->query($sql);
 		return $result->result_array();
 	}
 
+	public function getById($MaChuyenMuc){
+		$sql = "SELECT * FROM chuyenmuc WHERE MaChuyenMuc = ? AND TrangThai = 1";
+		$result = $this->db->query($sql, array($MaChuyenMuc));
+		return $result->result_array();
+	}
 }
 
 /* End of file Model_Category.php */

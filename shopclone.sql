@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2023 at 03:52 PM
+-- Generation Time: Jan 13, 2024 at 03:05 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -66,7 +66,8 @@ CREATE TABLE `chuyenmuc` (
 --
 
 INSERT INTO `chuyenmuc` (`MaChuyenMuc`, `TenChuyenMuc`, `HinhAnh`, `TrangThai`) VALUES
-(4, 'Mục mới 34', 'http://localhost/ShopClone/uploads/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x6002.jpg', 1);
+(4, 'Mục mới 34', 'http://localhost/ShopClone/uploads/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x6002.jpg', 1),
+(5, 'Mục mới', 'http://localhost/ShopClone/uploads/mat-buon-1.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -121,7 +122,7 @@ CREATE TABLE `donhang` (
 --
 
 INSERT INTO `donhang` (`MaDonHang`, `MaGiaoDich`, `DanhSachClone`, `MaNguoiDung`, `MaSanPham`, `SoLuong`, `ThanhToan`, `MaChuyenMuc`, `ThoiGian`) VALUES
-(1, 'GHFA4234325433', '100090792949406|ottlwerlndpdpsg|locale=my_MM; sb=lDkLZO01bEPFP_2NeQjfqhD3; c_user=100090792949406; xs=48%3AWUpQu17bSqD-SQ%3A2%3A1678457303%3A-1%3A-1; fr=0TIiDReYHL2dSjhhd.AWV9HoTqcIfXUHAIPtOcX5xeG8E.BkCzmU.tB.AAA.0.0.BkCznS.AWVjzVu3o_E|fullstopted@kosay4.tk||10-03-2023 - 14:05:03\r\n100090582296979|gkdcsmsguqkcvnv|locale=bs_BA; sb=sHMJZBjJ68oPj2WRa9azh87F; c_user=100090582296979; xs=16%3A-6PfpuTOVCjacg%3A2%3A1678341107%3A-1%3A-1; fr=0X2vqj4bQXJdZOoW2.AWXbSppSD6XmfMZewH-38-NGUk4.BkCXOw.8x.AAA.0.0.BkCXPv.AWVmMCuxs88|mohockduck@reacc.me||09-03-2023 - 05:48:29\r\n100090343143111|hfgdxlpvmaafffr|locale=en_US; sb=GNEJZAQ8qBeRiwTJSbT1z0Un; c_user=100090343143111; xs=26%3AxyVmRTlC_CH7-w%3A2%3A1678365023%3A-1%3A-1; fr=0Z10IF8wqTuxVJNl3.AWUMtXxq0jNAgaHs472yAp5ta3w.BkCdEY._k.AAA.0.0.BkCdFW.AWWBY0KPdnI|kylegilmour@yt-google.com||09-03-2023 - 12:27:06\r\n100090676372871|ivzmyldkcvfrhsb|locale=en_US; sb=X6sJZCA9Scv5tJoGCZA4sFbH; c_user=100090676372871; xs=10%3AKBOZJQfFqPQOMw%3A2%3A1678355365%3A-1%3A-1; fr=0NmRk5kIAyZvr9BwN.AWX_5uRwodq_hJuvw6pKX3KuJsQ.BkCatf.H6.AAA.0.0.BkCaud.AWXetLEth94|benthebadboy2@istitutocomprensivo-cavaglia.it||09-03-2023 - 09:46:09\r\n100090582296979|gkdcsmsguqkcvnv|locale=bs_BA; sb=sHMJZBjJ68oPj2WRa9azh87F; c_user=100090582296979; xs=16%3A-6PfpuTOVCjacg%3A2%3A1678341107%3A-1%3A-1; fr=0X2vqj4bQXJdZOoW2.AWXbSppSD6XmfMZewH-38-NGUk4.BkCXOw.8x.AAA.0.0.BkCXPv.AWVmMCuxs88|mohockduck@reacc.me||09-03-2023 - 05:48:29', 1, 7, 900, 135000, 4, '2023-12-03 00:10:59');
+(6, '534EB7CB666DAD', '100084047197041|prz!fbtOHz$co|7ZWXFCEUG7KTsdfUURJXN2JNPD7TJFP4JMK|robertojansons4171979@hotmail.com|ksqUJsadf03ltOJE74sdafa\n100084047197041|prz!fbtOHz$co|7ZWXFCEUG7KTUURJXN2JNPD7TJFP4JMK|robertojansons4171979@hotmail.com|ksqUJ03ltOJE74\n', 2, 8, 2, 200, 4, '2024-01-13 21:03:10');
 
 -- --------------------------------------------------------
 
@@ -146,6 +147,27 @@ INSERT INTO `khuyenmai` (`MaKhuyenMai`, `NapToiThieu`, `PhanTramKhuyenMai`, `Tho
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `lichsumua`
+--
+
+CREATE TABLE `lichsumua` (
+  `MaLichSuMua` int(11) NOT NULL,
+  `MaNguoiDung` int(11) NOT NULL,
+  `MaSanPham` int(11) NOT NULL,
+  `HanhDong` text NOT NULL,
+  `ThoiGian` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `lichsumua`
+--
+
+INSERT INTO `lichsumua` (`MaLichSuMua`, `MaNguoiDung`, `MaSanPham`, `HanhDong`, `ThoiGian`) VALUES
+(5, 2, 8, 'Đã thanh toán 200 VND để mua 2 tài khoản Tài khoản Gmail Việt Nam!', '2024-01-13 21:03:10');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `nguoidung`
 --
 
@@ -166,20 +188,8 @@ CREATE TABLE `nguoidung` (
 --
 
 INSERT INTO `nguoidung` (`MaNguoiDung`, `HoTen`, `TaiKhoan`, `MatKhau`, `SoDienThoai`, `Email`, `NgayThamGia`, `PhanQuyen`, `TrangThai`) VALUES
-(1, 'Quản Trị Viên', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0379962045', 'admin@gmail.com', '2023-11-24 19:04:09', 1, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `nhatky`
---
-
-CREATE TABLE `nhatky` (
-  `MaNhatKy` int(11) NOT NULL,
-  `MaNguoiDung` int(11) NOT NULL,
-  `HanhDong` text NOT NULL,
-  `ThoiGian` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+(1, 'Quản Trị Viên', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0379962045', 'chuminhnamma@gmail.com', '2023-11-24 19:04:09', 1, 1),
+(2, 'Nguyễn Văn An', 'nguyenvana', '20ca70c7c8f494c7bd1d54ad23d40cde', '0999888999', 'nguyenvana', '2024-01-12 18:04:19', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -524,7 +534,8 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`MaSanPham`, `TenSanPham`, `MaQuocGia`, `GiaBan`, `MuaToiDa`, `MuaToiThieu`, `MaChuyenMuc`, `MoTa`, `LuuY`, `DaBan`, `TrangThai`) VALUES
-(7, 'Clone Facebook mới', 103, 150, 1000, 100, 4, 'abcd', '<p>abcd</p>', 0, 1);
+(7, 'Clone Facebook mới', 103, 150, 1000, 100, 5, 'abcd', '<p>abcd</p>', 0, 1),
+(8, 'Tài khoản Gmail Việt Nam', 101, 100, 10000, 1, 4, 'Tài khoản gmail việt nam', '<p>Lưu &yacute;</p>\r\n<p>Lưu &yacute;</p>\r\n<p>Lưu &yacute;</p>', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -543,7 +554,7 @@ CREATE TABLE `taikhoan` (
 --
 
 INSERT INTO `taikhoan` (`MaTaiKhoan`, `MaSanPham`, `DanhSachTaiKhoan`) VALUES
-(4, 7, '');
+(5, 8, '100084069156608|pfskGCURviWmGfRjp|WVMGXIVIOYLFBTBNM67TN4JJ5PWJAA7S|sheridanlindall27670@hotmail.com|mC3jxyeEJYKT64');
 
 -- --------------------------------------------------------
 
@@ -587,7 +598,8 @@ CREATE TABLE `vitien` (
 --
 
 INSERT INTO `vitien` (`MaViTien`, `MaNguoiDung`, `SoDuKhaDung`, `DaSuDung`, `TongNap`) VALUES
-(1, 1, 900000, 14200, 1500000);
+(1, 1, 900000, 14200, 1500000),
+(2, 2, 99800, 10200, 110000);
 
 --
 -- Indexes for dumped tables
@@ -622,17 +634,19 @@ ALTER TABLE `khuyenmai`
   ADD PRIMARY KEY (`MaKhuyenMai`);
 
 --
+-- Indexes for table `lichsumua`
+--
+ALTER TABLE `lichsumua`
+  ADD PRIMARY KEY (`MaLichSuMua`),
+  ADD KEY `MaKhachHang` (`MaNguoiDung`),
+  ADD KEY `MaSanPham` (`MaSanPham`),
+  ADD KEY `MaSanPham_2` (`MaSanPham`);
+
+--
 -- Indexes for table `nguoidung`
 --
 ALTER TABLE `nguoidung`
   ADD PRIMARY KEY (`MaNguoiDung`);
-
---
--- Indexes for table `nhatky`
---
-ALTER TABLE `nhatky`
-  ADD PRIMARY KEY (`MaNhatKy`),
-  ADD KEY `MaKhachHang` (`MaNguoiDung`);
 
 --
 -- Indexes for table `quanlychuyenkhoan`
@@ -692,7 +706,7 @@ ALTER TABLE `vitien`
 -- AUTO_INCREMENT for table `chuyenmuc`
 --
 ALTER TABLE `chuyenmuc`
-  MODIFY `MaChuyenMuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `MaChuyenMuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `dongtien`
@@ -704,7 +718,7 @@ ALTER TABLE `dongtien`
 -- AUTO_INCREMENT for table `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `MaDonHang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `MaDonHang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `khuyenmai`
@@ -713,16 +727,16 @@ ALTER TABLE `khuyenmai`
   MODIFY `MaKhuyenMai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `lichsumua`
+--
+ALTER TABLE `lichsumua`
+  MODIFY `MaLichSuMua` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `nguoidung`
 --
 ALTER TABLE `nguoidung`
-  MODIFY `MaNguoiDung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `nhatky`
---
-ALTER TABLE `nhatky`
-  MODIFY `MaNhatKy` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaNguoiDung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `quanlychuyenkhoan`
@@ -746,19 +760,19 @@ ALTER TABLE `quocgia`
 -- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `MaSanPham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `MaSanPham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `MaTaiKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `MaTaiKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `vitien`
 --
 ALTER TABLE `vitien`
-  MODIFY `MaViTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `MaViTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -779,10 +793,11 @@ ALTER TABLE `donhang`
   ADD CONSTRAINT `donhang_ibfk_4` FOREIGN KEY (`MaChuyenMuc`) REFERENCES `chuyenmuc` (`MaChuyenMuc`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `nhatky`
+-- Constraints for table `lichsumua`
 --
-ALTER TABLE `nhatky`
-  ADD CONSTRAINT `nhatky_ibfk_1` FOREIGN KEY (`MaNguoiDung`) REFERENCES `nguoidung` (`MaNguoiDung`) ON DELETE CASCADE ON UPDATE NO ACTION;
+ALTER TABLE `lichsumua`
+  ADD CONSTRAINT `lichsumua_ibfk_1` FOREIGN KEY (`MaNguoiDung`) REFERENCES `nguoidung` (`MaNguoiDung`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `lichsumua_ibfk_2` FOREIGN KEY (`MaSanPham`) REFERENCES `sanpham` (`MaSanPham`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `quanlychuyenkhoan`
