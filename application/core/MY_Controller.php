@@ -48,6 +48,10 @@ class MY_Controller extends CI_Controller {
 
                 $this->Model_Card->update($mathe,$seri,$type,1);
                 if($xuly['status'] == 1){
+                    if(count($this->Model_Profile->checkDiscount($amount)) >= 1){
+                        $khuyenmai = $amount * ($this->Model_Profile->checkDiscount($amount)[0]['PhanTramKhuyenMai'] / 100);
+                        $amount = $amount + round($khuyenmai);
+                    }
                     $sodukhadung = $this->session->userdata('excess') + $amount;
                     $tongnap = $this->session->userdata('total') + $amount;
                     if(count($this->Model_Profile->getExcess($manguoidung)) >= 1){

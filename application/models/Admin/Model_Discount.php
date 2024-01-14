@@ -23,7 +23,7 @@ class Model_Discount extends CI_Model {
 	}
 
 	public function getById($MaKhuyenMai){
-		$sql = "SELECT * FROM khuyenmai WHERE MaKhuyenMai";
+		$sql = "SELECT * FROM khuyenmai WHERE MaKhuyenMai = ?";
 		$result = $this->db->query($sql, array($MaKhuyenMai));
 		return $result->result_array();
 	}

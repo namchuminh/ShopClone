@@ -51,6 +51,11 @@ class Model_Profile extends CI_Model {
 		return $result;
 	}
 
+	public function checkDiscount($tiennap){
+		$sql = "SELECT * FROM khuyenmai WHERE NapToiThieu <= ? ORDER BY NapToiThieu DESC LIMIT 1";
+		$result = $this->db->query($sql, array($tiennap));
+		return $result->result_array();
+	}
 }
 
 /* End of file Model_Profile.php */
