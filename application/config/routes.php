@@ -71,3 +71,5 @@ $route['ca-nhan'] = 'Website/Profile/index';
 $route['top-nap-tien'] = 'Website/Profile/topPay';
 $route['lien-he'] = 'Website/Contact/index';
 $route['chinh-sach'] = 'Website/Policy/index';
+
+$route['nap-tien-the'] = 'Website/Card/index';

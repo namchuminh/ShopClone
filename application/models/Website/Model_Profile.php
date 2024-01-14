@@ -38,6 +38,19 @@ class Model_Profile extends CI_Model {
 		$result = $this->db->query($sql);
 		return $result->result_array();
 	}
+
+	public function updateWalletPay($manguoidung,$tongnap, $sodukhadung){
+		$sql = "UPDATE `vitien` SET `SoDuKhaDung`=?,`TongNap`=? WHERE `MaNguoiDung`=?";
+		$result = $this->db->query($sql, array($sodukhadung, $tongnap, $manguoidung));
+		return $result;
+	}
+
+	public function insertWalletPay($manguoidung,$tongnap, $sodukhadung){
+		$sql = "INSERT INTO `vitien`(`MaNguoiDung`, `SoDuKhaDung`, `DaSuDung`, `TongNap`) VALUES (?,?,?,?)";
+		$result = $this->db->query($sql, array($manguoidung, $sodukhadung, 0, $tongnap));
+		return $result;
+	}
+
 }
 
 /* End of file Model_Profile.php */

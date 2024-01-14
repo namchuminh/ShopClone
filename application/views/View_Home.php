@@ -7,7 +7,7 @@
                     <i class="ti-user"></i>
                 </div>
                 <div class="stat-content">
-                    <div class="stat-digit">123</div>
+                    <div class="stat-digit"><?php echo $sumUser; ?></div>
                     <div class="stat-text">Khách hàng</div>
                 </div>
             </div>
@@ -18,11 +18,11 @@
         <div class="card p-0">
             <div class="stat-widget-three">
                 <div class="stat-icon bg-success">
-                    <i class="ti-user"></i>
+                    <i class="ti-write"></i>
                 </div>
                 <div class="stat-content">
-                    <div class="stat-digit">123</div>
-                    <div class="stat-text">New User</div>
+                    <div class="stat-digit"><?php echo $sumProduct; ?></div>
+                    <div class="stat-text">Sản Phẩm</div>
                 </div>
             </div>
         </div>
@@ -32,11 +32,11 @@
         <div class="card p-0">
             <div class="stat-widget-three">
                 <div class="stat-icon bg-info">
-                    <i class="ti-user"></i>
+                    <i class="ti-stats-up"></i>
                 </div>
                 <div class="stat-content">
-                    <div class="stat-digit">123</div>
-                    <div class="stat-text">New User</div>
+                    <div class="stat-digit"><?php echo $sumOrderClone; ?></div>
+                    <div class="stat-text">Clone Đã Bán</div>
                 </div>
             </div>
         </div>
@@ -46,11 +46,11 @@
         <div class="card p-0">
             <div class="stat-widget-three">
                 <div class="stat-icon bg-danger">
-                    <i class="ti-user"></i>
+                    <i class="ti-server"></i>
                 </div>
                 <div class="stat-content">
-                    <div class="stat-digit">123</div>
-                    <div class="stat-text">New User</div>
+                    <div class="stat-digit"><?php echo $sumClone; ?></div>
+                    <div class="stat-text">Clone Hiện Còn</div>
                 </div>
             </div>
         </div>

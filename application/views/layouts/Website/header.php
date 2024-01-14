@@ -70,8 +70,8 @@
                     </li>
 
                     <li class="label">Nạp Tiền</li>
-                    <li><a href="<?php echo base_url('admin/nap-the/'); ?>" title="Nạp Từ Thẻ"><i class="ti-layers-alt"></i> Nạp Từ Thẻ</a></li>
-                    <li><a href="<?php echo base_url('admin/ngan-hang/'); ?>" title="Nạp Từ Ngân Hàng"><i class="ti-credit-card"></i> Nạp Từ Ngân Hàng</a></li>
+                    <li><a href="<?php echo base_url('nap-tien-the/'); ?>" title="Nạp Từ Thẻ"><i class="ti-layers-alt"></i> Nạp Từ Thẻ</a></li>
+                    <li><a href="<?php echo base_url('nap-tien-bank/'); ?>" title="Nạp Từ Ngân Hàng"><i class="ti-credit-card"></i> Nạp Từ Ngân Hàng</a></li>
                     <li><a class="sidebar-sub-toggle" href="<?php echo base_url('lich-su-nap/'); ?>"><i class="ti-receipt" title="Lịch Sử Giao Dịch"></i>Lịch Sử Nạp</a></li>
 
                     <li class="label">Thông Tin</li>
