@@ -76,9 +76,9 @@
 
                     <li class="label">Thông Tin</li>
 
-                    <li><a href="<?php echo base_url('admin/nap-the/'); ?>" title="Top Nạp Tiền"><i class="ti-bar-chart"></i> Top Nạp Tiền</a></li>
-                    <li><a href="<?php echo base_url('admin/ngan-hang/'); ?>" title="Chính Sách"><i class="ti-bookmark-alt"></i> Chính Sách</a></li>
-                    <li><a href="<?php echo base_url('admin/cai-dat/'); ?>" title="Liên Hệ"><i class="ti-headphone"></i> Liên Hệ</a></li>
+                    <li><a href="<?php echo base_url('top-nap-tien/'); ?>" title="Top Nạp Tiền"><i class="ti-bar-chart"></i> Top Nạp Tiền</a></li>
+                    <li><a href="<?php echo base_url('chinh-sach/'); ?>" title="Chính Sách"><i class="ti-bookmark-alt"></i> Chính Sách</a></li>
+                    <li><a href="<?php echo base_url('lien-he/'); ?>" title="Liên Hệ"><i class="ti-headphone"></i> Liên Hệ</a></li>
 
                     <li class="label">Cá Nhân</li>
                     <li><a href="<?php echo base_url('don-mua/'); ?>"><i class="ti-folder" title="Danh Sách Đã Mua"></i> Danh Sách Đã Mua</a></li>

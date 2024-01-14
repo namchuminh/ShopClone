@@ -66,6 +66,12 @@ class Profile extends MY_Controller {
 		return $this->load->view('Website/Profile/View_Profile', $data);
 	}
 
+	public function topPay(){
+		$data['title'] = "Top thành viên nạp tiền";
+		$data['userPay'] = $this->Model_Profile->getTopPay();
+		return $this->load->view('Website/Profile/View_TopPay', $data);
+	}
+
 }
 
 /* End of file Profile.php */

@@ -249,7 +249,7 @@
                 
             },
             complete: function() {
-                setTimeout(fetchData, 7000); 
+                setTimeout(fetchData, 15000); 
             }
         });
     }

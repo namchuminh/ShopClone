@@ -34,6 +34,8 @@ class Setting extends CI_Controller {
 				$email = $this->input->post('email');
 				$facebook = $this->input->post('facebook');
 				$zalo = $this->input->post('zalo');
+				$huongdan = $this->input->post('huongdan');
+				$chinhsach = $this->input->post('chinhsach');
 
 				if(empty($tenwebsite) || empty($motawebsite) || empty($tukhoa) || empty($taikhoangmail) || empty($matkhaugmail) || empty($sodienthoai) || empty($email) || empty($facebook) || empty($zalo)){
 					$data['error'] = "Vui lòng nhập đủ thông tin cài đặt!";
@@ -75,7 +77,7 @@ class Setting extends CI_Controller {
 					return $this->load->view('Admin/Setting/View_Setting', $data);
 				}
 
-				$this->Model_Setting->insert($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo);
+				$this->Model_Setting->insert($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo,$huongdan,$chinhsach);
 
 				$data['detail'] = $this->Model_Setting->getAll();
 				$data['success'] = "Lưu thông tin cài đặt thành công!";
@@ -93,6 +95,8 @@ class Setting extends CI_Controller {
 				$email = $this->input->post('email');
 				$facebook = $this->input->post('facebook');
 				$zalo = $this->input->post('zalo');
+				$huongdan = $this->input->post('huongdan');
+				$chinhsach = $this->input->post('chinhsach');
 
 				if(empty($tenwebsite) || empty($motawebsite) || empty($tukhoa) || empty($taikhoangmail) || empty($matkhaugmail) || empty($sodienthoai) || empty($email) || empty($facebook) || empty($zalo)){
 					$data['error'] = "Vui lòng nhập đủ thông tin cài đặt!";
@@ -124,7 +128,7 @@ class Setting extends CI_Controller {
 					return $this->load->view('Admin/Setting/View_Setting', $data);
 				}
 
-				$this->Model_Setting->update($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo);
+				$this->Model_Setting->update($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo,$huongdan,$chinhsach);
 
 				$data['detail'] = $this->Model_Setting->getAll();
 				$data['success'] = "Lưu thông tin cài đặt thành công!";

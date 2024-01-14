@@ -114,17 +114,6 @@
 	}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.0/tinymce.min.js" referrerpolicy="origin"></script>
-<script>
-    tinymce.init({
-        selector: '#luuy',
-        readonly: true, 
-        height: 255,
-        menubar: false,
-        toolbar: false,
-        statusbar: false,
-        plugins: [],
-    });
-</script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		var giaban = '<?php echo $detail[0]['GiaBan']; ?>'
@@ -146,4 +135,15 @@
             }
         });
 	});
+</script>
+<script>
+    tinymce.init({
+        selector: '#luuy',
+        readonly: true, 
+        height: 255,
+        menubar: false,
+        toolbar: false,
+        statusbar: false,
+        plugins: [],
+    });
 </script>

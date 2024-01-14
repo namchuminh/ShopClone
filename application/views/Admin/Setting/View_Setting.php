@@ -159,6 +159,58 @@
         <div class="col-lg-12">
             <div class="card alert">
                 <div class="card-header">
+                    <h4>Video Hướng Dẫn (Youtube)</a></h4>
+                    <div class="card-header-right-icon">
+                        <ul>
+                            <li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <div class="form-group">
+                            <label>Đường Dẫn Video: </label>
+                            <?php if(isset($detail[0]['HuongDan']) && !empty($detail[0]['HuongDan'])){ ?>
+                                <input type="text" class="form-control" placeholder="Url Video Youtube *" name="huongdan" value="<?php echo $detail[0]['HuongDan']; ?>">
+                            <?php }else{ ?>
+                                <input type="text" class="form-control" placeholder="Url Video Youtube *" name="huongdan">
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="card alert">
+                <div class="card-header">
+                    <h4>Chính Sách</a></h4>
+                    <div class="card-header-right-icon">
+                        <ul>
+                            <li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <div class="form-group">
+                            <label>Nội Dung Chính Sách: </label>
+                            <?php if(isset($detail[0]['ChinhSach']) && !empty($detail[0]['ChinhSach'])){ ?>
+                                <textarea class="form-control editor" name="chinhsach">
+                                    <?php echo $detail[0]['ChinhSach']; ?>
+                                </textarea>
+                            <?php }else{ ?>
+                                <textarea class="form-control editor" name="chinhsach"></textarea>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="card alert">
+                <div class="card-header">
                     <button type="submit" class="btn btn-primary">Lưu Cài Đặt</button>
                 </div>
             </div>
@@ -175,7 +227,7 @@
     plugins: 'advlist autolink lists link image charmap print preview anchor',
     toolbar: 'undo redo | formatselect | bold italic strikethrough forecolor backcolor | link image | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | removeformat | code',    
     menubar: false,
-    height: 200
+    height: 500
   });
 </script>
 

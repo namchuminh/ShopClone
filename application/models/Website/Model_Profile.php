@@ -32,6 +32,12 @@ class Model_Profile extends CI_Model {
 		$result = $this->db->query($sql, array($hoten,$sodienthoai,$email,$matkhau,$manguoidung));
 		return $result;
 	}
+
+	public function getTopPay(){
+		$sql = "SELECT nguoidung.*, vitien.* FROM nguoidung, vitien WHERE nguoidung.MaNguoiDung = vitien.MaNguoiDung AND nguoidung.PhanQuyen = 0 ORDER BY vitien.TongNap DESC LIMIT 10";
+		$result = $this->db->query($sql);
+		return $result->result_array();
+	}
 }
 
 /* End of file Model_Profile.php */

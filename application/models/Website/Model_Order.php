@@ -28,7 +28,7 @@ class Model_Order extends CI_Model {
 	}
 
 	public function getHistory(){
-		$sql = "SELECT lichsumua.*, nguoidung.TaiKhoan FROM lichsumua, nguoidung WHERE lichsumua.MaNguoiDung = nguoidung.MaNguoiDung ORDER BY lichsumua.MaLichSuMua DESC LIMIT 5";
+		$sql = "SELECT lichsumua.*, nguoidung.TaiKhoan FROM lichsumua, nguoidung WHERE lichsumua.MaNguoiDung = nguoidung.MaNguoiDung ORDER BY lichsumua.MaLichSuMua DESC LIMIT 7";
 		$result = $this->db->query($sql);
 		return $result->result_array();
 	}

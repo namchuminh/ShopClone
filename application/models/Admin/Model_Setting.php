@@ -15,15 +15,15 @@ class Model_Setting extends CI_Model {
 		return $result->result_array();
 	}
 
-	public function insert($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo){
-		$sql = "INSERT INTO caidat (tenwebsite,motawebsite,tukhoa,logowebsite,faviconwebsite,taikhoangmail,matkhaugmail,sodienthoai,email,facebook,zalo) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
-		$result = $this->db->query($sql, array($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo));
+	public function insert($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo,$huongdan,$chinhsach){
+		$sql = "INSERT INTO caidat (tenwebsite,motawebsite,tukhoa,logowebsite,faviconwebsite,taikhoangmail,matkhaugmail,sodienthoai,email,facebook,zalo,huongdan,chinhsach) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$result = $this->db->query($sql, array($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo,$huongdan,$chinhsach));
 		return $result;
 	}
 
-	public function update($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo){
-		$sql = "UPDATE caidat SET tenwebsite = ?, motawebsite = ?, tukhoa = ?, logowebsite = ?, faviconwebsite = ?, taikhoangmail = ?, matkhaugmail = ?, sodienthoai = ?, email = ?, facebook = ?, zalo = ?";
-		$result = $this->db->query($sql, array($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo));
+	public function update($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo,$huongdan,$chinhsach){
+		$sql = "UPDATE caidat SET tenwebsite = ?, motawebsite = ?, tukhoa = ?, logowebsite = ?, faviconwebsite = ?, taikhoangmail = ?, matkhaugmail = ?, sodienthoai = ?, email = ?, facebook = ?, zalo = ?, huongdan = ?, chinhsach = ?";
+		$result = $this->db->query($sql, array($tenwebsite,$motawebsite,$tukhoa,$logowebsite,$faviconwebsite,$taikhoangmail,$matkhaugmail,$sodienthoai,$email,$facebook,$zalo,$huongdan,$chinhsach));
 		return $result;
 	}
 
