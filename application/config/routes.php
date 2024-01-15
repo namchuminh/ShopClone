@@ -73,3 +73,5 @@ $route['lien-he'] = 'Website/Contact/index';
 $route['chinh-sach'] = 'Website/Policy/index';
 
 $route['nap-tien-the'] = 'Website/Card/index';
+$route['nap-tien-bank'] = 'Website/Bank/index';
+$route['thanh-toan-vnpay'] = 'Website/Bank/resultVnpay';

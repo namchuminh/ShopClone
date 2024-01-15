@@ -111,7 +111,7 @@
                                 <th>Số Tiền</th>
                                 <th>Nội Dung</th>
                                 <th>Thời Gian</th>
-                                <th>TrangThai</th>
+                                <th>Trạng Thái</th>
                             </tr>
                         </thead>
                         <tbody>

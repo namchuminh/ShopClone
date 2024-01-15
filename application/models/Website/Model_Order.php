@@ -10,7 +10,7 @@ class Model_Order extends CI_Model {
 	}
 
 	public function getByIdUser($MaNguoiDung){
-		$sql = "SELECT * FROM donhang WHERE MaNguoiDung = ?";
+		$sql = "SELECT * FROM donhang WHERE MaNguoiDung = ? ORDER BY MaDonHang DESC";
 		$result = $this->db->query($sql, array($MaNguoiDung));
 		return $result->result_array();
 	}
