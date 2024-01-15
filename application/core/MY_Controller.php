@@ -59,6 +59,13 @@ class MY_Controller extends CI_Controller {
                     }else{
                         $this->Model_Profile->insertWalletPay($manguoidung,$tongnap,$sodukhadung);
                     }
+
+                    if(count($this->Model_Profile->getCashFlow($manguoidung)) >= 1){
+                        $this->Model_Profile->updateCashFlow($manguoidung,$this->session->userdata('excess'),$amount,$sodukhadung,"Khách hàng nạp ".number_format($amount). "đ vào tài khoản!");
+                    }else{
+                        $this->Model_Profile->insertCashFlow($manguoidung,0,$amount,$amount,"Khách hàng nạp ".number_format($amount). "đ vào tài khoản!");
+                    }
+
                     $newdata = array(
                         'total' => $tongnap,
                         'excess' => $sodukhadung,

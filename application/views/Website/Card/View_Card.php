@@ -78,25 +78,6 @@
 		        </div>
     		</div>
     	</div>
-    </div>
-    <!-- /# column -->
-    <div class="col-lg-3">
-    	<div class="row">
-    		<div class="col-lg-12">
-    			<div class="page-header">
-		            <div class="page-title">
-		                <h1>Lưu Ý Nạp Thẻ</h1>
-		            </div>
-		        </div>
-		        <div class="card alert">
-		            <div class="card-body">
-		                <?php if(isset($configCard[0]['LuuY']) && !empty($configCard[0]['LuuY'])){ ?>
-		            		<?php echo $configCard[0]['LuuY']; ?>
-		            	<?php } ?>
-		            </div>
-		        </div>
-    		</div>
-    	</div>
     	<?php if(count($configSale) >= 1){ ?>
 	       	<div class="row">
 	    		<div class="col-lg-12">
@@ -138,6 +119,26 @@
 	    		</div>
 	    	</div>
 	    <?php } ?>
+    </div>
+    <!-- /# column -->
+    <div class="col-lg-3">
+    	<div class="row">
+    		<div class="col-lg-12">
+    			<div class="page-header">
+		            <div class="page-title">
+		                <h1>Lưu Ý Nạp Thẻ</h1>
+		            </div>
+		        </div>
+		        <div class="card alert">
+		            <div class="card-body">
+		                <?php if(isset($configCard[0]['LuuY']) && !empty($configCard[0]['LuuY'])){ ?>
+		            		<?php echo $configCard[0]['LuuY']; ?>
+		            	<?php } ?>
+		            </div>
+		        </div>
+    		</div>
+    	</div>
+    	
     </div>
     <!-- /# column -->
 </div>

@@ -56,6 +56,18 @@ class Model_Profile extends CI_Model {
 		$result = $this->db->query($sql, array($tiennap));
 		return $result->result_array();
 	}
+
+	public function getCashFlow($manguoidung){
+		$sql = "SELECT * FROM dongtien WHERE MaNguoiDung = ?";
+		$result = $this->db->query($sql, array($manguoidung));
+		return $result->result_array();
+	}
+
+	public function insertCashFlow($manguoidung,$sotientruoc, $sotienthaydoi,$sotienhientai,$noidung){
+		$sql = "INSERT INTO `dongtien`(`MaNguoiDung`, `SoTienTruoc`, `SoTienThayDoi`, `SoTienHienTai`, `NoiDung`) VALUES (?,?,?,?,?)";
+		$result = $this->db->query($sql, array($manguoidung,$sotientruoc, $sotienthaydoi,$sotienhientai,$noidung));
+		return $result;
+	}
 }
 
 /* End of file Model_Profile.php */
