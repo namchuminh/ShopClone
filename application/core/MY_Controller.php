@@ -32,6 +32,41 @@ class MY_Controller extends CI_Controller {
         $this->data['history'] = $this->Model_Order->getHistory();
         $this->load->vars($this->data);
 
+        $this->getWalletUser($this->session->userdata('user'));
+        $this->checkPay();
+    }
+
+    private function curl_get($url)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $data = curl_exec($ch);
+        
+        curl_close($ch);
+        return $data;
+    }
+
+    private function getWalletUser($taikhoan){
+        $excess = 0;
+        $total = 0;
+        $used = 0;
+
+        if(count($this->Model_Profile->getExcess($this->Model_Login->getInfoByUsername($taikhoan)[0]['MaNguoiDung'])) >= 1){
+            $excess = $this->Model_Profile->getExcess($this->Model_Login->getInfoByUsername($taikhoan)[0]['MaNguoiDung'])[0]['SoDuKhaDung'];
+            $total = $this->Model_Profile->getExcess($this->Model_Login->getInfoByUsername($taikhoan)[0]['MaNguoiDung'])[0]['TongNap'];
+            $used = $this->Model_Profile->getExcess($this->Model_Login->getInfoByUsername($taikhoan)[0]['MaNguoiDung'])[0]['DaSuDung'];
+        }
+
+        $newdata = array(
+            'excess' => $excess,
+            'total' => $total,
+            'used' => $used,
+        );
+        $this->session->set_userdata($newdata);
+    }
+
+    private function checkPay(){
         $manguoidung = $this->session->userdata('id');
         if(count($this->Model_Card->check($manguoidung)) >= 1){
             foreach ($this->Model_Card->check($manguoidung) as $keylop => $value) {
@@ -60,11 +95,7 @@ class MY_Controller extends CI_Controller {
                         $this->Model_Profile->insertWalletPay($manguoidung,$tongnap,$sodukhadung);
                     }
 
-                    if(count($this->Model_Profile->getCashFlow($manguoidung)) >= 1){
-                        $this->Model_Profile->updateCashFlow($manguoidung,$this->session->userdata('excess'),$amount,$sodukhadung,"Khách hàng nạp ".number_format($amount). "đ vào tài khoản!");
-                    }else{
-                        $this->Model_Profile->insertCashFlow($manguoidung,0,$amount,$amount,"Khách hàng nạp ".number_format($amount). "đ vào tài khoản!");
-                    }
+                    $this->Model_Profile->insertCashFlow($manguoidung,$this->session->userdata('excess'),$amount,$sodukhadung,"Khách hàng nạp ".number_format($amount). "đ vào tài khoản!");
 
                     $newdata = array(
                         'total' => $tongnap,
@@ -77,17 +108,6 @@ class MY_Controller extends CI_Controller {
                 }
             }
         }
-    }
-
-    private function curl_get($url)
-    {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $data = curl_exec($ch);
-        
-        curl_close($ch);
-        return $data;
     }
 }
 
