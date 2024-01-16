@@ -11,11 +11,19 @@ class Login extends CI_Controller {
 
 	    $this->load->model('Website/Model_Login');
 	    $this->load->model('Website/Model_Profile');
+	    $this->load->model('Website/Model_Category');
+        $this->load->model('Website/Model_Product');
+        $this->load->model('Website/Model_Order');
+        $this->load->model('Model_Website');
 	}
 
 	public function index()
 	{
 		$data['title'] = "Đăng nhập tài khoản hệ thống!";
+		$data['product'] = $this->Model_Product->getAll();
+        $data['category'] = $this->Model_Category->getAll();
+        $data['history'] = $this->Model_Order->getHistory();
+        $data['config'] = $this->Model_Website->getAllConfig();
 		if ($this->input->server('REQUEST_METHOD') === 'POST') {
             $taikhoan = $this->input->post('taikhoan');
 			$matkhau = md5($this->input->post('matkhau'));

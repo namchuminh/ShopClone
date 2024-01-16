@@ -9,10 +9,10 @@ class Logout extends MY_Controller {
 
 	public function index()
 	{	
-		$userdata = array('id', 'username', 'excess', 'login', 'phone', 'email', 'jointime');
+		$userdata = array('id', 'user', 'excess', 'fullname', 'login', 'phone', 'email', 'jointime');
 		$this->session->unset_userdata($userdata);
 		$this->session->set_flashdata('success', 'Đăng xuất thành công!');
-		return redirect(base_url('dang-nhap/'));
+		return redirect(base_url());
 	}
 
 }

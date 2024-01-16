@@ -13,7 +13,7 @@ class Home extends MY_Controller {
 
 	public function index()
 	{
-		$data['title'] = "Shop Clone mua tài nguyên mạng xã hội!";
+		$data['title'] = "Mua tài khoản, nguyên liệu mạng xã hội!";
 		$data['category'] = $this->Model_Category->getAll();
 		$data['sumUser'] = count($this->Model_Website->getSumUser());
 		$data['sumOrderClone'] = $this->Model_Website->sumOrderClone()[0]['SoLuongBan'];

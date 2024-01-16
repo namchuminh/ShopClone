@@ -57,47 +57,49 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="stat-widget-two">
-                <div class="stat-content">
-                    <div class="stat-text">Tổng Nạp </div>
-                    <div class="stat-digit"> <?php echo number_format($_SESSION['total']); ?> VND</div>
+<?php if(isset($_SESSION['user'])){ ?>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="stat-widget-two">
+                    <div class="stat-content">
+                        <div class="stat-text">Tổng Nạp </div>
+                        <div class="stat-digit"> <?php echo number_format($_SESSION['total']); ?> VND</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success w-100" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                 </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-success w-100" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="stat-widget-two">
+                    <div class="stat-content">
+                        <div class="stat-text">Số Dư Hiện Tại</div>
+                        <div class="stat-digit"> <?php echo number_format($_SESSION['excess']); ?> VND</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary w-100" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="stat-widget-two">
+                    <div class="stat-content">
+                        <div class="stat-text">Đã Sử Dụng</div>
+                        <div class="stat-digit"> <?php echo number_format($_SESSION['used']); ?> VND</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning w-100" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="stat-widget-two">
-                <div class="stat-content">
-                    <div class="stat-text">Số Dư Hiện Tại</div>
-                    <div class="stat-digit"> <?php echo number_format($_SESSION['excess']); ?> VND</div>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-primary w-100" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="stat-widget-two">
-                <div class="stat-content">
-                    <div class="stat-text">Đã Sử Dụng</div>
-                    <div class="stat-digit"> <?php echo number_format($_SESSION['used']); ?> VND</div>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-warning w-100" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php } ?>
 
 <div class="row">
     <div class="col-lg-9">

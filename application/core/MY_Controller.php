@@ -6,34 +6,35 @@ class MY_Controller extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-
-        if(!$this->session->has_userdata('login')){
-            return redirect(base_url('dang-nhap/'));
-        }
-
-        $this->load->model('Website/Model_Login');
-        if($this->Model_Login->checkAccountBlock($this->session->userdata('user')) >= 1){
-            $userdata = array('id', 'username', 'excess', 'login', 'phone', 'email', 'jointime');
-            $this->session->unset_userdata($userdata);
-            $this->session->set_flashdata('error', 'Bạn đã bị chặn khỏi hệ thống!');
-            return redirect(base_url('dang-nhap/'));
-        }
-
-        $this->load->model('Website/Model_Category');
-        $this->load->model('Website/Model_Product');
         $this->load->model('Model_Website');
         $this->load->model('Website/Model_Order');
         $this->load->model('Website/Model_Card');
         $this->load->model('Website/Model_Profile');
+        $this->load->model('Website/Model_Category');
+        $this->load->model('Website/Model_Product');
+        $current_url = $this->uri->uri_string();
+        if(($current_url != "") && ($current_url != "top-nap-tien") && ($current_url != "chinh-sach") && ($current_url != "lien-he")){
+            if(!$this->session->has_userdata('login')){
+                $this->session->set_flashdata('error', "Vui lòng đăng nhập để thực hiện!");
+                return redirect(base_url('dang-nhap/'));
+            }else{
+                $this->load->model('Website/Model_Login');
+                if($this->Model_Login->checkAccountBlock($this->session->userdata('user')) >= 1){
+                    $userdata = array('id', 'user', 'excess', 'login', 'phone', 'email', 'jointime');
+                    $this->session->unset_userdata($userdata);
+                    $this->session->set_flashdata('error', 'Bạn đã bị chặn khỏi hệ thống!');
+                    return redirect(base_url('dang-nhap/'));
+                }
+                $this->getWalletUser($this->session->userdata('user'));
+                $this->checkPay();
+            }
+        }
 
         $this->data['product'] = $this->Model_Product->getAll();
         $this->data['category'] = $this->Model_Category->getAll();
-        $this->data['config'] = $this->Model_Website->getAllConfig();
         $this->data['history'] = $this->Model_Order->getHistory();
+        $this->data['config'] = $this->Model_Website->getAllConfig();
         $this->load->vars($this->data);
-
-        $this->getWalletUser($this->session->userdata('user'));
-        $this->checkPay();
     }
 
     private function curl_get($url)

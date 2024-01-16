@@ -9,7 +9,7 @@ class Contact extends MY_Controller {
 
 	public function index()
 	{
-		$data['title'] = "Thông tin liên hệ";
+		$data['title'] = "Liên hệ với chúng tôi";
 		return $this->load->view('Website/Contact/View_Contact', $data);
 	}
 
