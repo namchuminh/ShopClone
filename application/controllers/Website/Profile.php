@@ -72,6 +72,13 @@ class Profile extends MY_Controller {
 		return $this->load->view('Website/Profile/View_TopPay', $data);
 	}
 
+	public function payHistory(){
+		$data['title'] = "Lịch sử nạp tiền";
+		$data['listCard'] = $this->Model_Profile->getListCard($this->session->userdata('id'));
+		$data['listBank'] = $this->Model_Profile->getListBank($this->session->userdata('id'));
+		return $this->load->view('Website/Profile/View_PayHistory', $data);
+	}
+
 }
 
 /* End of file Profile.php */

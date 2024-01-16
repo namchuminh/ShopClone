@@ -111,6 +111,7 @@
                                 <th>Loại Thẻ</th>
                                 <th>Mệnh Giá</th>
                                 <th>Thời Gian</th>
+                                <th>Trạng Thái</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -134,6 +135,15 @@
                                     </td>
                                     <td>
                                         <?php echo $value['ThoiGian']; ?>
+                                    </td>
+                                    <td>
+                                        <?php if($value['TrangThai'] == 0){ ?>
+                                            Đang xử lý
+                                        <?php }else if($value['TrangThai'] == 1){ ?>
+                                            Thành công
+                                        <?php }else{ ?>
+                                            Thất bại
+                                        <?php } ?>
                                     </td>
                                 </tr>
                             <?php endforeach ?>

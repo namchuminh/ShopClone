@@ -68,6 +68,18 @@ class Model_Profile extends CI_Model {
 		$result = $this->db->query($sql, array($manguoidung,$sotientruoc, $sotienthaydoi,$sotienhientai,$noidung));
 		return $result;
 	}
+
+	public function getListCard($manguoidung){
+		$sql = "SELECT * FROM quanlynapthe WHERE MaNguoiDung = ? ORDER BY MaNapThe DESC";
+		$result = $this->db->query($sql, array($manguoidung));
+		return $result->result_array();
+	}
+
+	public function getListBank($manguoidung){
+		$sql = "SELECT * FROM quanlychuyenkhoan WHERE MaNguoiDung = ? ORDER BY MaChuyenKhoan DESC";
+		$result = $this->db->query($sql, array($manguoidung));
+		return $result->result_array();
+	}
 }
 
 /* End of file Model_Profile.php */

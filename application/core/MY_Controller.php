@@ -106,6 +106,8 @@ class MY_Controller extends CI_Controller {
                     $this->session->set_flashdata('success', 'Hệ thống đã cộng tiền vào tài khoản của bạn!');
                 }else if($xuly['status'] == 99 || $xuly['status'] == 4){
                     $this->Model_Card->update($mathe,$seri,$type,0);
+                }else{
+                    $this->Model_Card->update($mathe,$seri,$type,2);
                 }
             }
         }
