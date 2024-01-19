@@ -27,6 +27,29 @@ class Model_Login extends CI_Model {
 		return $result->result_array();
 	}
 
+	public function getInfoByEmail($email){
+		$sql = "SELECT * FROM nguoidung WHERE Email = ?";
+		$result = $this->db->query($sql, array($email));
+		return $result->result_array();
+	}
+
+	public function getInfoByPhone($phone){
+		$sql = "SELECT * FROM nguoidung WHERE SoDienThoai = ?";
+		$result = $this->db->query($sql, array($phone));
+		return $result->result_array();
+	}
+
+	public function register($hoten,$sodienthoai,$email,$taikhoan,$matkhau){
+		$sql = "INSERT INTO nguoidung (HoTen,SoDienThoai,Email,TaiKhoan,MatKhau) VALUES(?, ?, ?, ?, ?)";
+		$result = $this->db->query($sql, array($hoten,$sodienthoai,$email,$taikhoan,$matkhau));
+		return $result;
+	}
+
+	public function updatePassword($matkhau,$email,$taikhoan){
+		$sql = "UPDATE nguoidung SET MatKhau = ? WHERE Email = ? AND TaiKhoan = ?";
+		$result = $this->db->query($sql, array($matkhau,$email,$taikhoan));
+		return $result;
+	}
 }
 
 /* End of file Model_Login.php */

@@ -10,6 +10,8 @@ $route['admin/dang-xuat'] = 'Admin/Logout/index';
 $route['admin/quen-mat-khau'] = 'Admin/Login/forgotPassword';
 
 $route['admin/chuyen-muc'] = 'Admin/Category/index';
+
+$route['admin/chuyen-muc'] = 'Admin/Category/index';
 $route['admin/chuyen-muc/them'] = 'Admin/Category/add';
 $route['admin/chuyen-muc/sua/(:any)'] = 'Admin/Category/update/$1';
 $route['admin/chuyen-muc/xoa/(:any)'] = 'Admin/Category/delete/$1';
@@ -50,7 +52,11 @@ $route['admin/ca-nhan'] = 'Admin/Profile/index';
 $route['admin/cai-dat'] = 'Admin/Setting/index';
 
 $route['dang-nhap'] = 'Website/Login/index';
+$route['dang-ky'] = 'Website/Login/register';
+$route['quen-mat-khau'] = 'Website/Login/forgetPassword';
 $route['dang-xuat'] = 'Website/Logout/index';
+
+
 
 
 $route['chuyen-muc'] = 'Home/index';

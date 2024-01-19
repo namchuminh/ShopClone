@@ -26,10 +26,9 @@ class MY_Controller extends CI_Controller {
                     return redirect(base_url('dang-nhap/'));
                 }
                 $this->getWalletUser($this->session->userdata('user'));
-                $this->checkPay();
             }
         }
-
+        $this->checkPay();
         $this->data['product'] = $this->Model_Product->getAll();
         $this->data['category'] = $this->Model_Category->getAll();
         $this->data['history'] = $this->Model_Order->getHistory();
