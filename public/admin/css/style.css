@@ -1694,17 +1694,18 @@ footer p {
 }
 
 .stat-widget-one .stat-content {
-    margin-left: 30px;
+    margin-left: 15px;
     margin-top: 7px
 }
 
 .stat-widget-one .stat-text {
+    font-weight: 600;
     font-size: 14px;
     color: #252525
 }
 
 .stat-widget-one .stat-digit {
-    font-size: 24px;
+    font-size: 15px;
     color: #252525
 }
 

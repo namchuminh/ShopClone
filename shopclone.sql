@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2024 at 12:02 PM
+-- Generation Time: Jan 19, 2024 at 04:05 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -87,13 +87,6 @@ CREATE TABLE `dongtien` (
   `NoiDung` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `dongtien`
---
-
-INSERT INTO `dongtien` (`MaDongTien`, `MaNguoiDung`, `SoTienTruoc`, `SoTienThayDoi`, `SoTienHienTai`, `ThoiGian`, `NoiDung`) VALUES
-(23, 2, 0, 1030000, 1030000, '2024-01-16 17:40:45', 'Khách hàng nạp 1,030,000đ vào tài khoản!');
-
 -- --------------------------------------------------------
 
 --
@@ -172,8 +165,9 @@ CREATE TABLE `nguoidung` (
 --
 
 INSERT INTO `nguoidung` (`MaNguoiDung`, `HoTen`, `TaiKhoan`, `MatKhau`, `SoDienThoai`, `Email`, `NgayThamGia`, `PhanQuyen`, `TrangThai`) VALUES
-(1, 'Quản Trị Viên', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0379962045', 'chuminhnamma@gmail.com', '2023-11-24 19:04:09', 1, 1),
-(2, 'Chu Minh Nam', 'nguyenvana', '20ca70c7c8f494c7bd1d54ad23d40cde', '0888555999', 'namdeptrai@gmail.com', '2024-01-12 18:04:19', 0, 1);
+(1, 'Quản Trị Viên', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0379962045', 'admin@gmail.com', '2023-11-24 19:04:09', 1, 1),
+(2, 'Chu Minh Nam', 'nguyenvana', '20ca70c7c8f494c7bd1d54ad23d40cde', '0888555999', 'chuminhnamma@gmail.com', '2024-01-12 18:04:19', 0, 1),
+(3, 'Chu Minh Nam', 'chuminhnam', '206dcce3f82cf8981d316e7900dc8e06', '0999888999', 'chuminhnam@gmail.com', '2024-01-19 14:47:23', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -677,7 +671,7 @@ ALTER TABLE `chuyenmuc`
 -- AUTO_INCREMENT for table `dongtien`
 --
 ALTER TABLE `dongtien`
-  MODIFY `MaDongTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `MaDongTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `donhang`
@@ -701,7 +695,7 @@ ALTER TABLE `lichsumua`
 -- AUTO_INCREMENT for table `nguoidung`
 --
 ALTER TABLE `nguoidung`
-  MODIFY `MaNguoiDung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `MaNguoiDung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `quanlychuyenkhoan`
@@ -713,7 +707,7 @@ ALTER TABLE `quanlychuyenkhoan`
 -- AUTO_INCREMENT for table `quanlynapthe`
 --
 ALTER TABLE `quanlynapthe`
-  MODIFY `MaNapThe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `MaNapThe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `quocgia`
@@ -737,7 +731,7 @@ ALTER TABLE `taikhoan`
 -- AUTO_INCREMENT for table `vitien`
 --
 ALTER TABLE `vitien`
-  MODIFY `MaViTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `MaViTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

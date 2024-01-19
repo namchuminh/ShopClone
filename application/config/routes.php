@@ -9,7 +9,7 @@ $route['admin/dang-nhap'] = 'Admin/Login/index';
 $route['admin/dang-xuat'] = 'Admin/Logout/index';
 $route['admin/quen-mat-khau'] = 'Admin/Login/forgotPassword';
 
-$route['admin/chuyen-muc'] = 'Admin/Category/index';
+$route['admin'] = 'Admin/Dashboard/index';
 
 $route['admin/chuyen-muc'] = 'Admin/Category/index';
 $route['admin/chuyen-muc/them'] = 'Admin/Category/add';
