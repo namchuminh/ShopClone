@@ -14,7 +14,7 @@
                 <ol class="breadcrumb text-right">
                     <li><a href="<?php echo base_url('admin/'); ?>">Trang Chủ</a></li>
                     <li><a href="<?php echo base_url('admin/san-pham/'); ?>">Sản Phẩm</a></li>
-                    <li class="active">Nhập Clone</li>
+                    <li class="active">Nhập Tài Khoản</li>
                 </ol>
             </div>
         </div>
@@ -27,7 +27,7 @@
     <div class="col-lg-12">
         <div class="card alert">
             <div class="card-header">
-                <h4>Nhập Danh Sách Clone</h4>
+                <h4>Nhập Danh Sách Tài Khoản</h4>
                 <div class="card-header-right-icon">
                     <ul>
                         <li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
@@ -53,7 +53,7 @@
                         <br>
                         <div>
                         	<a class="btn btn-default" href="<?php echo base_url('admin/san-pham/'); ?>">Quay Lại</a>
-                        	<button type="submit" class="btn btn-primary">Nhập Clone</button>
+                        	<button type="submit" class="btn btn-primary">Nhập Tài Khoản</button>
                         </div>
                     </form>
                 </div>

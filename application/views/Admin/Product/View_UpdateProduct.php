@@ -43,6 +43,10 @@
                             <input type="text" class="form-control" placeholder="Tên Sản Phẩm *" name="tensanpham" value="<?php echo $detail[0]['TenSanPham']; ?>">
                         </div>
                         <div class="form-group">
+                            <label>Hình Ảnh</label>
+                            <input type="file" class="form-control" name="hinhanh">
+                        </div>
+                        <div class="form-group">
                             <label>Quốc Gia</label>
                             <select class="form-control" name="maquocgia">
                                 <?php foreach ($country as $key => $value): ?>
@@ -71,7 +75,7 @@
                             <label>Chuyên Mục</label>
                             <select class="form-control" name="machuyenmuc">
                                 <?php foreach ($category as $key => $value): ?>
-                                    <?php if($detail[0]['MaChuyenMuc'] = $value['MaChuyenMuc']){ ?>
+                                    <?php if($detail[0]['MaChuyenMuc'] == $value['MaChuyenMuc']){ ?>
                                         <option value="<?php echo $value['MaChuyenMuc']; ?>" selected><?php echo $value['TenChuyenMuc']; ?></option>
                                     <?php }else{ ?>
                                         <option value="<?php echo $value['MaChuyenMuc']; ?>"><?php echo $value['TenChuyenMuc']; ?></option>

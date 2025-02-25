@@ -63,8 +63,8 @@
 	                            <th>Chuyên Mục</th>
 	                            <th>Trạng Thái</th>
 	                            <th>Đã Bán</th>
-	                            <th>Nhập Clone</th>
-	                            <th>Xóa Clone</th>
+	                            <th>Nhập Tài Khoản</th>
+	                            <th>Xóa Tài Khoản</th>
 	                            <th style="text-align: left;">Hành Động</th>
 	                        </tr>
 	                    </thead>
@@ -74,10 +74,11 @@
 	                    		<tr>
 		                            <th scope="row"><?php echo $key + 1; ?></th>
 		                            <td>
+		                            	<img width="50" height="50" src="<?php echo $value['HinhAnh'] ?>">
 		                            	<strong><?php echo $value['TenSanPham']; ?></strong>
 		                            </td>
 		                            <td>
-		                            	<span class="badge badge-danger"><?php echo $value['GiaBan']; ?></span>
+		                            	<span class="badge badge-danger"><?php echo number_format($value['GiaBan']); ?> VND</span>
 		                            </td>
 		                            <td>
 		                            	<span class="badge badge-dark"><?php echo $value['TenChuyenMuc']; ?></span>
@@ -93,10 +94,10 @@
 		                            	<span class="badge badge-warning"><?php echo $value['DaBan']; ?></span>
 		                            </td>
 		                            <td>
-		                            	<a class="btn btn-info" href="<?php echo base_url('admin/san-pham/'.$value['MaSanPham'].'/nhap-clone/'); ?>">Thêm Clone</a>
+		                            	<a class="btn btn-info" href="<?php echo base_url('admin/san-pham/'.$value['MaSanPham'].'/nhap-clone/'); ?>">Thêm Tài Khoản</a>
 		                            </td>
 		                            <td>
-		                            	<a class="btn btn-danger" href="<?php echo base_url('admin/san-pham/'.$value['MaSanPham'].'/xoa-clone/'); ?>">Xóa Clone</a>
+		                            	<a class="btn btn-danger" href="<?php echo base_url('admin/san-pham/'.$value['MaSanPham'].'/xoa-clone/'); ?>">Xóa Tài Khoản</a>
 		                            </td>
 		                            <td>
 		                            	<a class="btn btn-primary" href="<?php echo base_url('admin/san-pham/sua/'.$value['MaSanPham'].'/'); ?>">Cập Nhật</a>

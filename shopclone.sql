@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2024 at 04:05 PM
+-- Generation Time: Feb 25, 2025 at 03:45 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -48,7 +48,7 @@ CREATE TABLE `caidat` (
 --
 
 INSERT INTO `caidat` (`TenWebsite`, `MoTaWebsite`, `TuKhoa`, `LogoWebsite`, `FaviconWebsite`, `TaiKhoanGmail`, `MatKhauGmail`, `SoDienThoai`, `Email`, `Facebook`, `Zalo`, `HuongDan`, `ChinhSach`) VALUES
-('Shop Clone 247', 'Cung cấp các sản phẩm nguyên liệu cho Facebook, Tiktok, Gmail và các tài khoản mạng xã hội cho các khách hàng làm dịch vụ Marketing', 'shop clone, clone shop, mua clone, web bán clone giá rẻ, sellclone, clone gia re, clone viet, mua tai khoan, taikhoan fb, shop nick fb, via fb, shop via, via gia re', 'http://localhost/ShopClone/uploads/banner_chu_4-11.jpg', 'http://localhost/ShopClone/uploads/social-media.png', 'lienhe.shopclone247@gmail.com', 'mabpkfkgbxlltrsw', '0379962045', 'lienhe.shopclone247@gmail.com', 'https://www.facebook.com/namchuminhh/', 'https://zalo.me/0379962045', 'https://www.youtube.com/watch?v=y2rlOOw0Xqg', '<h2 id=\"chinh-sach-dich-vu-cham-soc-khach-hang-trong-cac-doanh-nghiep\" dir=\"ltr\">1. Ch&iacute;nh s&aacute;ch dịch vụ chăm s&oacute;c kh&aacute;ch h&agrave;ng trong c&aacute;c doanh nghiệp</h2>\r\n<h3 id=\"khai-niem-chinh-sach-dich-vu-khach-hang\" dir=\"ltr\">1.1. Kh&aacute;i niệm ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</h3>\r\n<p dir=\"ltr\">Kh&aacute;ch h&agrave;ng l&agrave; đối tượng được quan t&acirc;m h&agrave;ng đầu trong bất cứ một doanh nghiệp hay một tổ chức kinh doanh n&agrave;o. Việc x&acirc;y dựng những ch&iacute;nh s&aacute;ch, sử dụng những&nbsp;<strong>phần mềm quản l&yacute; kh&aacute;ch h&agrave;ng crm online</strong>&nbsp;đều l&agrave; c&aacute;ch thức để c&aacute;c doanh nghiệp tập trung v&agrave;o đối tượng n&agrave;y. Vậy ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng l&agrave; g&igrave;?</p>\r\n<p dir=\"ltr\">Ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng được hiểu l&agrave; những quy định, chương tr&igrave;nh của một doanh nghiệp được x&acirc;y dựng để phục vụ cho c&ocirc;ng việc chăm s&oacute;c kh&aacute;ch h&agrave;ng của m&igrave;nh. Những ch&iacute;nh n&agrave;y sẽ bao gồm những ch&iacute;nh s&aacute;ch dịch vụ nhỏ li&ecirc;n quan đến đối tượng người ti&ecirc;u d&ugrave;ng. Đ&oacute; c&oacute; thể l&agrave; ch&iacute;nh s&aacute;ch khuyến m&atilde;i, ch&iacute;nh s&aacute;ch cho kh&aacute;ch h&agrave;ng th&acirc;n thiết, ch&iacute;nh s&aacute;ch t&iacute;ch điểm, ch&iacute;nh s&aacute;ch hỗ trợ, giải đ&aacute;p nhu cầu của kh&aacute;ch h&agrave;ng,...</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/chinh-sach-dich-vu-khach-hang.jpg\" alt=\"Ch&iacute;nh s&aacute;ch dịch vụ chăm s&oacute;c kh&aacute;ch h&agrave;ng trong c&aacute;c doanh nghiệp\" width=\"800\" height=\"450\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/chinh-sach-dich-vu-khach-hang.jpg\">\r\n<figcaption>Ch&iacute;nh s&aacute;ch dịch vụ chăm s&oacute;c kh&aacute;ch h&agrave;ng trong c&aacute;c doanh nghiệp</figcaption>\r\n</figure>\r\n</div>\r\n<h3 id=\"ly-do-can-co-chinh-sach-dich-vu-khach-hang\" dir=\"ltr\">1.2. L&yacute; do cần c&oacute; ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</h3>\r\n<p dir=\"ltr\">Như đ&atilde; n&oacute;i ở tr&ecirc;n, kh&aacute;ch h&agrave;ng l&agrave; người lu&ocirc;n được c&aacute;c doanh nghiệp hướng đến khi x&acirc;y dựng v&agrave; trao đi gi&aacute; trị của m&igrave;nh. Việc thiết lập, tạo dựng những ch&iacute;nh s&aacute;ch li&ecirc;n quan đến chăm s&oacute;c dịch vụ kh&aacute;ch h&agrave;ng l&agrave; v&ocirc; c&ugrave;ng cần thiết.</p>\r\n<p dir=\"ltr\">Thị trường cạnh tranh khốc liệt, c&aacute;c doanh nghiệp với c&ugrave;ng lĩnh vực kinh doanh khiến cho sự lựa chọn của kh&aacute;ch h&agrave;ng ng&agrave;y c&agrave;ng đa dạng. Điểm mấu chốt trong cuộc chạy đua xem ai l&agrave; những c&aacute;i t&ecirc;n nổi bật hơn ch&iacute;nh l&agrave; nằm ở những ch&iacute;nh s&aacute;ch dịch vụ n&agrave;y.</p>\r\n<p dir=\"ltr\">C&aacute;c doanh nghiệp hiểu r&otilde; rằng, việc x&acirc;y dựng những ch&iacute;nh s&aacute;ch dịch vụ trở th&agrave;nh l&yacute; do khiến kh&aacute;ch h&agrave;ng ghi nhớ thương hiệu, thu h&uacute;t th&ecirc;m nhiều kh&aacute;ch h&agrave;ng mục ti&ecirc;u. Đồng thời g&oacute;p phần đẩy mạnh t&igrave;nh h&igrave;nh kinh doanh, đem về những lợi nhuận đ&aacute;ng kể cho m&igrave;nh.</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/giu-chan-khach-hang.jpg\" alt=\"L&yacute; do cần c&oacute; ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng\" width=\"800\" height=\"450\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/giu-chan-khach-hang.jpg\">\r\n<figcaption>L&yacute; do cần c&oacute; ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</figcaption>\r\n</figure>\r\n</div>\r\n<h2 id=\"cach-thuc-de-xay-dung-chinh-sach-dich-vu-khach-hang-hieu-qua\" dir=\"ltr\">2. C&aacute;ch thức để x&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng hiệu quả</h2>\r\n<h3 id=\"cach-xay-dung-chinh-sach-dich-vu-khach-hang\" dir=\"ltr\">2.1. C&aacute;ch x&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</h3>\r\n<p dir=\"ltr\">Để c&oacute; thể x&acirc;y dựng được những ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng th&igrave; c&aacute;c doanh nghiệp cần thực hiện c&aacute;c bước cơ bản bao gồm: tiến h&agrave;nh thu thập, quản l&yacute; th&ocirc;ng tin kh&aacute;ch h&agrave;ng; x&acirc;y dựng c&aacute;c ch&iacute;nh s&aacute;ch dịch vụ dựa tr&ecirc;n những yếu tố li&ecirc;n quan; cuối c&ugrave;ng l&agrave; đưa ch&iacute;nh s&aacute;ch v&agrave;o hoạt động thực tế v&agrave; đ&aacute;nh gi&aacute; để điều chỉnh cho ph&ugrave; hợp.</p>\r\n<h4 id=\"thu-thap-va-quan-ly-thong-tin-khach-hang\" dir=\"ltr\">2.1.1. Thu thập v&agrave; quản l&yacute; th&ocirc;ng tin kh&aacute;ch h&agrave;ng</h4>\r\n<p dir=\"ltr\">Đ&acirc;y l&agrave; bước cơ bản đầu ti&ecirc;n gi&uacute;p doanh nghiệp c&oacute; cơ sở để x&acirc;y dựng l&ecirc;n những ch&iacute;nh s&aacute;ch dịch vụ hiệu quả. Khi thực hiện bước n&agrave;y, c&aacute;c nh&agrave; quản l&yacute; sẽ sử dụng những c&ocirc;ng cụ hỗ trợ như&nbsp;<strong>phần mềm quản l&yacute; kh&aacute;ch h&agrave;ng CRM online miễn ph&iacute;</strong>.&nbsp;</p>\r\n<p dir=\"ltr\">Thu thập, ph&acirc;n t&iacute;ch th&ocirc;ng tin kh&aacute;ch h&agrave;ng qua việc x&acirc;y dựng chiến lược kinh doanh cụ thể để t&igrave;m ra những ch&iacute;nh s&aacute;ch ph&ugrave; hợp. Nếu doanh nghiệp của bạn thực sự hiểu r&otilde; những th&ocirc;ng tin v&agrave; c&oacute; khả năng ph&acirc;n t&iacute;ch, thấu hiểu những t&acirc;m l&yacute; kh&aacute;ch h&agrave;ng th&igrave; việc tạo ra ch&iacute;nh s&aacute;ch dịch vụ sẽ trở n&ecirc;n đơn giản v&agrave; hiệu quả hơn rất nhiều.</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/xay-dung-chinh-sach.jpg\" alt=\"C&aacute;ch x&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng\" width=\"800\" height=\"532\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/xay-dung-chinh-sach.jpg\">\r\n<figcaption>C&aacute;ch x&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</figcaption>\r\n</figure>\r\n</div>\r\n<h4 id=\"xay-dung-chinh-sach-dich-vu-dua-tren-nhung-dac-diem-phu-hop\" dir=\"ltr\">2.1.2. X&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ dựa tr&ecirc;n những đặc điểm ph&ugrave; hợp</h4>\r\n<p dir=\"ltr\">Bước thứ hai của quy tr&igrave;nh n&agrave;y đ&oacute; l&agrave; l&ecirc;n kế hoạch v&agrave; tiến th&agrave;nh tạo dựng những ch&iacute;nh s&aacute;ch dịch vụ cho kh&aacute;ch h&agrave;ng. Sau khi đ&atilde; ph&acirc;n t&iacute;ch r&otilde; r&agrave;ng những th&ocirc;ng tin, đặc điểm chung của đối tượng th&igrave; c&aacute;c doanh nghiệp cần l&ecirc;n kế hoạch cụ thể cho việc x&acirc;y dựng ch&iacute;nh s&aacute;ch.&nbsp;</p>\r\n<p dir=\"ltr\">Ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng n&ecirc;n được b&aacute;m s&aacute;t dựa theo những đặc điểm ri&ecirc;ng của doanh nghiệp. Ph&ugrave; hợp với t&agrave;i ch&iacute;nh, nguồn lực v&agrave; đi đứng theo phương hướng cũng như gi&aacute; trị cốt l&otilde;i m&agrave; doanh nghiệp muốn mang đến cho người ti&ecirc;u d&ugrave;ng.</p>\r\n<h4 id=\"dua-nhung-chinh-sach-vao-hoat-dong-thuc-te\" dir=\"ltr\">2.1.3. Đưa những ch&iacute;nh s&aacute;ch v&agrave;o hoạt động thực tế</h4>\r\n<p dir=\"ltr\">Sau khi x&acirc;y dựng xong v&agrave; t&igrave;m ra được sự khả th&igrave; th&igrave; việc đưa những ch&iacute;nh s&aacute;ch đ&oacute; v&agrave;o thực tế l&agrave; bước cuối c&ugrave;ng c&aacute;c doanh nghiệp phải l&agrave;m. Sau qu&aacute; tr&igrave;nh hoạt động thử nghiệm, c&aacute;c doanh nghiệp cần đưa ra những đ&aacute;nh gi&aacute; chi tiết về sự hiệu quả của những ch&iacute;nh s&aacute;ch đ&oacute;.</p>\r\n<p dir=\"ltr\">Tiền h&agrave;nh c&aacute;c c&aacute;ch thức để t&igrave;m kiếm những &yacute; kiến x&acirc;y dựng như việc thảo luận hoặc th&acirc;m nhập v&agrave;o thị trường thực tế để c&oacute; thể đưa ra những g&oacute;c nh&igrave;n kh&aacute;ch quan nhất. Đồng thời c&oacute; thể điều chỉnh ph&ugrave; hợp nếu ch&iacute;nh s&aacute;ch kh&ocirc;ng qu&aacute; khả thi tr&ecirc;n phương diện thực tiễn.&nbsp;</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/thuc-te-cham-soc-khach-hang.jpg\" alt=\" Đưa những ch&iacute;nh s&aacute;ch v&agrave;o hoạt động thực tế\" width=\"800\" height=\"450\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/thuc-te-cham-soc-khach-hang.jpg\">\r\n<figcaption>Đưa những ch&iacute;nh s&aacute;ch v&agrave;o hoạt động thực tế</figcaption>\r\n</figure>\r\n</div>\r\n<h3 id=\"nhung-luu-y-khi-xay-dung-nhung-chinh-sach-dich-vu-khach-hang\" dir=\"ltr\">2.2. Những lưu &yacute; khi x&acirc;y dựng những ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</h3>\r\n<h4 id=\"bam-sat-muc-tieu-trong-chien-luoc-kinh-doanh\" dir=\"ltr\">2.2.1. B&aacute;m s&aacute;t mục ti&ecirc;u trong chiến lược kinh doanh</h4>\r\n<p dir=\"ltr\">Điều đầu ti&ecirc;n c&aacute;c doanh nghiệp cần lưu &yacute;, đ&oacute; l&agrave; qu&aacute; tr&igrave;nh x&acirc;y dựng ch&iacute;nh s&aacute;ch phải lu&ocirc;n b&aacute;m s&aacute;t với mục ti&ecirc;u chiến lược kinh doanh của doanh nghiệp m&igrave;nh. Kh&ocirc;ng c&oacute; ch&iacute;nh s&aacute;ch dịch vụ n&agrave;o lại hiệu quả nếu n&oacute; kh&ocirc;ng đem đến gi&aacute; trị xứng tầm với mục ti&ecirc;u của doanh nghiệp. Ngược lại, những ch&iacute;nh s&aacute;ch với đặc điểm qu&aacute; xa vời sẽ gặp rất nhiều kh&oacute; khăn trong qu&aacute; tr&igrave;nh hoạt động. Tạo ra những hạn chế về t&iacute;nh khả thi, từ đ&oacute; g&acirc;y ra sự thất bại kinh doanh đ&aacute;ng tiếc.</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/muc-tieu-kinh-doanh.jpg\" alt=\" B&aacute;m s&aacute;t mục ti&ecirc;u trong chiến lược kinh doanh\" width=\"800\" height=\"450\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/muc-tieu-kinh-doanh.jpg\">\r\n<figcaption>B&aacute;m s&aacute;t mục ti&ecirc;u trong chiến lược kinh doanh</figcaption>\r\n</figure>\r\n</div>\r\n<h4 id=\"thau-hieu-tam-ly-de-cham-soc-khach-hang-hieu-qua\" dir=\"ltr\">2.2.2. Thấu hiểu t&acirc;m l&yacute; để chăm s&oacute;c kh&aacute;ch h&agrave;ng hiệu quả</h4>\r\n<p dir=\"ltr\">Việc th&ocirc;ng qua những trải nghiệm thực tế c&ugrave;ng việc thấu hiểu t&acirc;m l&yacute; kh&aacute;ch h&agrave;ng cũng l&agrave; một trong những lưu &yacute; quan trọng khi x&acirc;y dựng những ch&iacute;nh s&aacute;ch dịch vụ n&agrave;y. C&aacute;c doanh nghiệp phải hiểu r&otilde; đối tượng của họ l&agrave; ai? Họ cần v&agrave; mong muốn điều g&igrave; khi sử dụng dịch vụ th&igrave; mới c&oacute; thể đem lại những ch&iacute;nh s&aacute;ch hiệu quả tối đa được.</p>\r\n<p dir=\"ltr\">T&acirc;m l&yacute; con người l&agrave; mu&ocirc;n h&igrave;nh vạn trạng. Việc trở th&agrave;nh &ldquo;n&agrave;ng d&acirc;u&rdquo; của trăm họ c&oacute; thể khiến bạn đau đầu thế nhưng nếu kh&eacute;o l&eacute;o, am hiểu v&agrave; biết c&aacute;ch th&igrave; ch&uacute;ng t&ocirc;i tin rằng kh&ocirc;ng một ai c&oacute; thể ch&ecirc; bai ch&iacute;nh s&aacute;ch của bạn.</p>');
+('Shop Game 247', 'Cung cấp các sản phẩm nguyên liệu cho Facebook, Tiktok, Gmail và các tài khoản mạng xã hội cho các khách hàng làm dịch vụ Marketing', 'shop clone, clone shop, mua clone, web bán clone giá rẻ, sellclone, clone gia re, clone viet, mua tai khoan, taikhoan fb, shop nick fb, via fb, shop via, via gia re', 'http://localhost/ShopClone/uploads/banner_chu_4-11.jpg', 'http://localhost/ShopClone/uploads/social-media.png', 'lienhe.shopclone247@gmail.com', 'mabpkfkgbxlltrsw', '0379962045', 'lienhe.shopclone247@gmail.com', 'https://www.facebook.com/namchuminhh/', 'https://zalo.me/0379962045', 'https://www.youtube.com/watch?v=y2rlOOw0Xqg', '<h2 id=\"chinh-sach-dich-vu-cham-soc-khach-hang-trong-cac-doanh-nghiep\" dir=\"ltr\">1. Ch&iacute;nh s&aacute;ch dịch vụ chăm s&oacute;c kh&aacute;ch h&agrave;ng trong c&aacute;c doanh nghiệp</h2>\r\n<h3 id=\"khai-niem-chinh-sach-dich-vu-khach-hang\" dir=\"ltr\">1.1. Kh&aacute;i niệm ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</h3>\r\n<p dir=\"ltr\">Kh&aacute;ch h&agrave;ng l&agrave; đối tượng được quan t&acirc;m h&agrave;ng đầu trong bất cứ một doanh nghiệp hay một tổ chức kinh doanh n&agrave;o. Việc x&acirc;y dựng những ch&iacute;nh s&aacute;ch, sử dụng những&nbsp;<strong>phần mềm quản l&yacute; kh&aacute;ch h&agrave;ng crm online</strong>&nbsp;đều l&agrave; c&aacute;ch thức để c&aacute;c doanh nghiệp tập trung v&agrave;o đối tượng n&agrave;y. Vậy ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng l&agrave; g&igrave;?</p>\r\n<p dir=\"ltr\">Ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng được hiểu l&agrave; những quy định, chương tr&igrave;nh của một doanh nghiệp được x&acirc;y dựng để phục vụ cho c&ocirc;ng việc chăm s&oacute;c kh&aacute;ch h&agrave;ng của m&igrave;nh. Những ch&iacute;nh n&agrave;y sẽ bao gồm những ch&iacute;nh s&aacute;ch dịch vụ nhỏ li&ecirc;n quan đến đối tượng người ti&ecirc;u d&ugrave;ng. Đ&oacute; c&oacute; thể l&agrave; ch&iacute;nh s&aacute;ch khuyến m&atilde;i, ch&iacute;nh s&aacute;ch cho kh&aacute;ch h&agrave;ng th&acirc;n thiết, ch&iacute;nh s&aacute;ch t&iacute;ch điểm, ch&iacute;nh s&aacute;ch hỗ trợ, giải đ&aacute;p nhu cầu của kh&aacute;ch h&agrave;ng,...</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/chinh-sach-dich-vu-khach-hang.jpg\" alt=\"Ch&iacute;nh s&aacute;ch dịch vụ chăm s&oacute;c kh&aacute;ch h&agrave;ng trong c&aacute;c doanh nghiệp\" width=\"800\" height=\"450\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/chinh-sach-dich-vu-khach-hang.jpg\">\r\n<figcaption>Ch&iacute;nh s&aacute;ch dịch vụ chăm s&oacute;c kh&aacute;ch h&agrave;ng trong c&aacute;c doanh nghiệp</figcaption>\r\n</figure>\r\n</div>\r\n<h3 id=\"ly-do-can-co-chinh-sach-dich-vu-khach-hang\" dir=\"ltr\">1.2. L&yacute; do cần c&oacute; ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</h3>\r\n<p dir=\"ltr\">Như đ&atilde; n&oacute;i ở tr&ecirc;n, kh&aacute;ch h&agrave;ng l&agrave; người lu&ocirc;n được c&aacute;c doanh nghiệp hướng đến khi x&acirc;y dựng v&agrave; trao đi gi&aacute; trị của m&igrave;nh. Việc thiết lập, tạo dựng những ch&iacute;nh s&aacute;ch li&ecirc;n quan đến chăm s&oacute;c dịch vụ kh&aacute;ch h&agrave;ng l&agrave; v&ocirc; c&ugrave;ng cần thiết.</p>\r\n<p dir=\"ltr\">Thị trường cạnh tranh khốc liệt, c&aacute;c doanh nghiệp với c&ugrave;ng lĩnh vực kinh doanh khiến cho sự lựa chọn của kh&aacute;ch h&agrave;ng ng&agrave;y c&agrave;ng đa dạng. Điểm mấu chốt trong cuộc chạy đua xem ai l&agrave; những c&aacute;i t&ecirc;n nổi bật hơn ch&iacute;nh l&agrave; nằm ở những ch&iacute;nh s&aacute;ch dịch vụ n&agrave;y.</p>\r\n<p dir=\"ltr\">C&aacute;c doanh nghiệp hiểu r&otilde; rằng, việc x&acirc;y dựng những ch&iacute;nh s&aacute;ch dịch vụ trở th&agrave;nh l&yacute; do khiến kh&aacute;ch h&agrave;ng ghi nhớ thương hiệu, thu h&uacute;t th&ecirc;m nhiều kh&aacute;ch h&agrave;ng mục ti&ecirc;u. Đồng thời g&oacute;p phần đẩy mạnh t&igrave;nh h&igrave;nh kinh doanh, đem về những lợi nhuận đ&aacute;ng kể cho m&igrave;nh.</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/giu-chan-khach-hang.jpg\" alt=\"L&yacute; do cần c&oacute; ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng\" width=\"800\" height=\"450\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/giu-chan-khach-hang.jpg\">\r\n<figcaption>L&yacute; do cần c&oacute; ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</figcaption>\r\n</figure>\r\n</div>\r\n<h2 id=\"cach-thuc-de-xay-dung-chinh-sach-dich-vu-khach-hang-hieu-qua\" dir=\"ltr\">2. C&aacute;ch thức để x&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng hiệu quả</h2>\r\n<h3 id=\"cach-xay-dung-chinh-sach-dich-vu-khach-hang\" dir=\"ltr\">2.1. C&aacute;ch x&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</h3>\r\n<p dir=\"ltr\">Để c&oacute; thể x&acirc;y dựng được những ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng th&igrave; c&aacute;c doanh nghiệp cần thực hiện c&aacute;c bước cơ bản bao gồm: tiến h&agrave;nh thu thập, quản l&yacute; th&ocirc;ng tin kh&aacute;ch h&agrave;ng; x&acirc;y dựng c&aacute;c ch&iacute;nh s&aacute;ch dịch vụ dựa tr&ecirc;n những yếu tố li&ecirc;n quan; cuối c&ugrave;ng l&agrave; đưa ch&iacute;nh s&aacute;ch v&agrave;o hoạt động thực tế v&agrave; đ&aacute;nh gi&aacute; để điều chỉnh cho ph&ugrave; hợp.</p>\r\n<h4 id=\"thu-thap-va-quan-ly-thong-tin-khach-hang\" dir=\"ltr\">2.1.1. Thu thập v&agrave; quản l&yacute; th&ocirc;ng tin kh&aacute;ch h&agrave;ng</h4>\r\n<p dir=\"ltr\">Đ&acirc;y l&agrave; bước cơ bản đầu ti&ecirc;n gi&uacute;p doanh nghiệp c&oacute; cơ sở để x&acirc;y dựng l&ecirc;n những ch&iacute;nh s&aacute;ch dịch vụ hiệu quả. Khi thực hiện bước n&agrave;y, c&aacute;c nh&agrave; quản l&yacute; sẽ sử dụng những c&ocirc;ng cụ hỗ trợ như&nbsp;<strong>phần mềm quản l&yacute; kh&aacute;ch h&agrave;ng CRM online miễn ph&iacute;</strong>.&nbsp;</p>\r\n<p dir=\"ltr\">Thu thập, ph&acirc;n t&iacute;ch th&ocirc;ng tin kh&aacute;ch h&agrave;ng qua việc x&acirc;y dựng chiến lược kinh doanh cụ thể để t&igrave;m ra những ch&iacute;nh s&aacute;ch ph&ugrave; hợp. Nếu doanh nghiệp của bạn thực sự hiểu r&otilde; những th&ocirc;ng tin v&agrave; c&oacute; khả năng ph&acirc;n t&iacute;ch, thấu hiểu những t&acirc;m l&yacute; kh&aacute;ch h&agrave;ng th&igrave; việc tạo ra ch&iacute;nh s&aacute;ch dịch vụ sẽ trở n&ecirc;n đơn giản v&agrave; hiệu quả hơn rất nhiều.</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/xay-dung-chinh-sach.jpg\" alt=\"C&aacute;ch x&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng\" width=\"800\" height=\"532\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/xay-dung-chinh-sach.jpg\">\r\n<figcaption>C&aacute;ch x&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</figcaption>\r\n</figure>\r\n</div>\r\n<h4 id=\"xay-dung-chinh-sach-dich-vu-dua-tren-nhung-dac-diem-phu-hop\" dir=\"ltr\">2.1.2. X&acirc;y dựng ch&iacute;nh s&aacute;ch dịch vụ dựa tr&ecirc;n những đặc điểm ph&ugrave; hợp</h4>\r\n<p dir=\"ltr\">Bước thứ hai của quy tr&igrave;nh n&agrave;y đ&oacute; l&agrave; l&ecirc;n kế hoạch v&agrave; tiến th&agrave;nh tạo dựng những ch&iacute;nh s&aacute;ch dịch vụ cho kh&aacute;ch h&agrave;ng. Sau khi đ&atilde; ph&acirc;n t&iacute;ch r&otilde; r&agrave;ng những th&ocirc;ng tin, đặc điểm chung của đối tượng th&igrave; c&aacute;c doanh nghiệp cần l&ecirc;n kế hoạch cụ thể cho việc x&acirc;y dựng ch&iacute;nh s&aacute;ch.&nbsp;</p>\r\n<p dir=\"ltr\">Ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng n&ecirc;n được b&aacute;m s&aacute;t dựa theo những đặc điểm ri&ecirc;ng của doanh nghiệp. Ph&ugrave; hợp với t&agrave;i ch&iacute;nh, nguồn lực v&agrave; đi đứng theo phương hướng cũng như gi&aacute; trị cốt l&otilde;i m&agrave; doanh nghiệp muốn mang đến cho người ti&ecirc;u d&ugrave;ng.</p>\r\n<h4 id=\"dua-nhung-chinh-sach-vao-hoat-dong-thuc-te\" dir=\"ltr\">2.1.3. Đưa những ch&iacute;nh s&aacute;ch v&agrave;o hoạt động thực tế</h4>\r\n<p dir=\"ltr\">Sau khi x&acirc;y dựng xong v&agrave; t&igrave;m ra được sự khả th&igrave; th&igrave; việc đưa những ch&iacute;nh s&aacute;ch đ&oacute; v&agrave;o thực tế l&agrave; bước cuối c&ugrave;ng c&aacute;c doanh nghiệp phải l&agrave;m. Sau qu&aacute; tr&igrave;nh hoạt động thử nghiệm, c&aacute;c doanh nghiệp cần đưa ra những đ&aacute;nh gi&aacute; chi tiết về sự hiệu quả của những ch&iacute;nh s&aacute;ch đ&oacute;.</p>\r\n<p dir=\"ltr\">Tiền h&agrave;nh c&aacute;c c&aacute;ch thức để t&igrave;m kiếm những &yacute; kiến x&acirc;y dựng như việc thảo luận hoặc th&acirc;m nhập v&agrave;o thị trường thực tế để c&oacute; thể đưa ra những g&oacute;c nh&igrave;n kh&aacute;ch quan nhất. Đồng thời c&oacute; thể điều chỉnh ph&ugrave; hợp nếu ch&iacute;nh s&aacute;ch kh&ocirc;ng qu&aacute; khả thi tr&ecirc;n phương diện thực tiễn.&nbsp;</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/thuc-te-cham-soc-khach-hang.jpg\" alt=\" Đưa những ch&iacute;nh s&aacute;ch v&agrave;o hoạt động thực tế\" width=\"800\" height=\"450\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/thuc-te-cham-soc-khach-hang.jpg\">\r\n<figcaption>Đưa những ch&iacute;nh s&aacute;ch v&agrave;o hoạt động thực tế</figcaption>\r\n</figure>\r\n</div>\r\n<h3 id=\"nhung-luu-y-khi-xay-dung-nhung-chinh-sach-dich-vu-khach-hang\" dir=\"ltr\">2.2. Những lưu &yacute; khi x&acirc;y dựng những ch&iacute;nh s&aacute;ch dịch vụ kh&aacute;ch h&agrave;ng</h3>\r\n<h4 id=\"bam-sat-muc-tieu-trong-chien-luoc-kinh-doanh\" dir=\"ltr\">2.2.1. B&aacute;m s&aacute;t mục ti&ecirc;u trong chiến lược kinh doanh</h4>\r\n<p dir=\"ltr\">Điều đầu ti&ecirc;n c&aacute;c doanh nghiệp cần lưu &yacute;, đ&oacute; l&agrave; qu&aacute; tr&igrave;nh x&acirc;y dựng ch&iacute;nh s&aacute;ch phải lu&ocirc;n b&aacute;m s&aacute;t với mục ti&ecirc;u chiến lược kinh doanh của doanh nghiệp m&igrave;nh. Kh&ocirc;ng c&oacute; ch&iacute;nh s&aacute;ch dịch vụ n&agrave;o lại hiệu quả nếu n&oacute; kh&ocirc;ng đem đến gi&aacute; trị xứng tầm với mục ti&ecirc;u của doanh nghiệp. Ngược lại, những ch&iacute;nh s&aacute;ch với đặc điểm qu&aacute; xa vời sẽ gặp rất nhiều kh&oacute; khăn trong qu&aacute; tr&igrave;nh hoạt động. Tạo ra những hạn chế về t&iacute;nh khả thi, từ đ&oacute; g&acirc;y ra sự thất bại kinh doanh đ&aacute;ng tiếc.</p>\r\n<div>\r\n<figure><img class=\" lazyloaded\" src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/muc-tieu-kinh-doanh.jpg\" alt=\" B&aacute;m s&aacute;t mục ti&ecirc;u trong chiến lược kinh doanh\" width=\"800\" height=\"450\" data-src=\"https://storage.timviec365.vn/timviec365/pictures/images_11_2021/muc-tieu-kinh-doanh.jpg\">\r\n<figcaption>B&aacute;m s&aacute;t mục ti&ecirc;u trong chiến lược kinh doanh</figcaption>\r\n</figure>\r\n</div>\r\n<h4 id=\"thau-hieu-tam-ly-de-cham-soc-khach-hang-hieu-qua\" dir=\"ltr\">2.2.2. Thấu hiểu t&acirc;m l&yacute; để chăm s&oacute;c kh&aacute;ch h&agrave;ng hiệu quả</h4>\r\n<p dir=\"ltr\">Việc th&ocirc;ng qua những trải nghiệm thực tế c&ugrave;ng việc thấu hiểu t&acirc;m l&yacute; kh&aacute;ch h&agrave;ng cũng l&agrave; một trong những lưu &yacute; quan trọng khi x&acirc;y dựng những ch&iacute;nh s&aacute;ch dịch vụ n&agrave;y. C&aacute;c doanh nghiệp phải hiểu r&otilde; đối tượng của họ l&agrave; ai? Họ cần v&agrave; mong muốn điều g&igrave; khi sử dụng dịch vụ th&igrave; mới c&oacute; thể đem lại những ch&iacute;nh s&aacute;ch hiệu quả tối đa được.</p>\r\n<p dir=\"ltr\">T&acirc;m l&yacute; con người l&agrave; mu&ocirc;n h&igrave;nh vạn trạng. Việc trở th&agrave;nh &ldquo;n&agrave;ng d&acirc;u&rdquo; của trăm họ c&oacute; thể khiến bạn đau đầu thế nhưng nếu kh&eacute;o l&eacute;o, am hiểu v&agrave; biết c&aacute;ch th&igrave; ch&uacute;ng t&ocirc;i tin rằng kh&ocirc;ng một ai c&oacute; thể ch&ecirc; bai ch&iacute;nh s&aacute;ch của bạn.</p>');
 
 -- --------------------------------------------------------
 
@@ -68,8 +68,12 @@ CREATE TABLE `chuyenmuc` (
 --
 
 INSERT INTO `chuyenmuc` (`MaChuyenMuc`, `TenChuyenMuc`, `HinhAnh`, `TrangThai`) VALUES
-(4, 'Mục mới 34', 'http://localhost/ShopClone/uploads/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x6002.jpg', 1),
-(5, 'Mục mới', 'http://localhost/ShopClone/uploads/mat-buon-1.jpg', 1);
+(4, 'Tài khoản Facebook', 'http://localhost/ShopClone/uploads/605511_facebook_soscialmedia_connection_fb_logo_icon.png', 1),
+(5, 'Tài khoản Gmail', 'http://localhost/ShopClone/uploads/logo-gmail-png-file-gmail-icon-svg-wikimedia-commons-0.png', 1),
+(6, 'Tài khoản Tiktok', 'http://localhost/ShopClone/uploads/tiktok-share-icon-black-logo-29FFD062A0-seeklogo_com.png', 1),
+(7, 'Tài khoản Instagram', 'http://localhost/ShopClone/uploads/pngtree-three-dimensional-instagram-icon-png-image_9015419.png', 1),
+(8, 'Tài khoản Twitter ', 'http://localhost/ShopClone/uploads/free-twitter-logo-icon-2429-thumb.png', 1),
+(9, 'Liên Minh Huyền Thoại', 'http://localhost/ShopClone/uploads/Lien-Minh-Huyen-Thoai-ky-niem-10-nam-1.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -86,6 +90,17 @@ CREATE TABLE `dongtien` (
   `ThoiGian` datetime NOT NULL DEFAULT current_timestamp(),
   `NoiDung` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `dongtien`
+--
+
+INSERT INTO `dongtien` (`MaDongTien`, `MaNguoiDung`, `SoTienTruoc`, `SoTienThayDoi`, `SoTienHienTai`, `ThoiGian`, `NoiDung`) VALUES
+(32, 3, 0, 100000, 100000, '2024-01-19 22:55:12', 'Admin cộng 100,000đ vào tài khoản!'),
+(33, 2, 0, 100000, 100000, '2024-01-19 22:55:41', 'Admin cộng 100,000đ vào tài khoản!'),
+(34, 3, 9900, 15150, 25050, '2024-05-07 19:08:04', 'Khách hàng nạp 15,150đ vào tài khoản!'),
+(35, 3, 25050, 10100, 35150, '2024-05-11 08:59:46', 'Khách hàng nạp 10,100đ vào tài khoản!'),
+(36, 3, 35150, 10100, 45250, '2024-05-11 09:09:46', 'Khách hàng nạp 10,100đ vào tài khoản!');
 
 -- --------------------------------------------------------
 
@@ -104,6 +119,16 @@ CREATE TABLE `donhang` (
   `MaChuyenMuc` int(11) NOT NULL,
   `ThoiGian` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `donhang`
+--
+
+INSERT INTO `donhang` (`MaDonHang`, `MaGiaoDich`, `DanhSachClone`, `MaNguoiDung`, `MaSanPham`, `SoLuong`, `ThanhToan`, `MaChuyenMuc`, `ThoiGian`) VALUES
+(40, 'F314B850E946AF', '100084069156608|pfskGCURviWmGfRjp|WVMGXIVIOYLFBTBNM67TN4JJ5PWJAA7S|sheridanlindall27670@hotmail.com|mC3jxyASDF\n', 3, 8, 1, 100, 4, '2024-05-07 00:28:33'),
+(41, '17C03AA36DDC19', 'testtaikhoan3|123123trtyrtyrt33333\n', 2, 10, 1, 5000, 4, '2025-02-12 20:37:50'),
+(42, 'AF237BB75BD8D6', '100084047197041|prz!fbtOHz$co|7ZWXFCEUG7KTUURJXN2JNPD7TJFP4JM756K|robertojansons4171979@hotmail.com|ksqUJ03ltOJE74567\n', 2, 8, 1, 100, 5, '2025-02-25 21:19:24'),
+(43, '49ABFED58178DA', '100084069156608|pfskGCURviWmGfRjp|WVMGXIVIOYLFBTBNM67TN4JJ5PWJAA7S|sheridanlindall27670@hotmail.com|mC3jxyeEJYKT66765\n100076648476515|5ao3uzm4wd0|BB2LBCF4JFO4AZC2FZBY3AOG4JHIJT5V|nowaynuilu@o756utlook.com|xlMZaa44|12/29/1980\n', 2, 8, 2, 200, 5, '2025-02-25 21:26:54');
 
 -- --------------------------------------------------------
 
@@ -141,6 +166,16 @@ CREATE TABLE `lichsumua` (
   `HanhDong` text NOT NULL,
   `ThoiGian` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `lichsumua`
+--
+
+INSERT INTO `lichsumua` (`MaLichSuMua`, `MaNguoiDung`, `MaSanPham`, `HanhDong`, `ThoiGian`) VALUES
+(39, 3, 8, 'Đã mua 1 Tài khoản Gmail Việt Nam!', '2024-05-07 00:28:33'),
+(40, 2, 10, 'Đã mua 1 Nick Liên Minh Full Tướng, Rank Vàng!', '2025-02-12 20:37:50'),
+(41, 2, 8, 'Đã mua 1 Tài khoản Gmail Việt Nam!', '2025-02-25 21:19:24'),
+(42, 2, 8, 'Đã mua 2 Tài khoản Gmail Việt Nam!', '2025-02-25 21:26:54');
 
 -- --------------------------------------------------------
 
@@ -187,6 +222,13 @@ CREATE TABLE `quanlychuyenkhoan` (
   `TrangThai` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `quanlychuyenkhoan`
+--
+
+INSERT INTO `quanlychuyenkhoan` (`MaChuyenKhoan`, `MaThanhToan`, `MaNguoiDung`, `NganHang`, `LoaiThe`, `SoTien`, `NoiDung`, `ThoiGian`, `TrangThai`) VALUES
+(7, 'ChuyenKhoan', 3, 'NCB', 'ATM', 15150, 'Chu Minh Nam nạp tiền vào tài khoản!', '2024-05-07 19:08:04', 'Thành công');
+
 -- --------------------------------------------------------
 
 --
@@ -205,6 +247,14 @@ CREATE TABLE `quanlynapthe` (
   `Request_Id` text NOT NULL,
   `TrangThai` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `quanlynapthe`
+--
+
+INSERT INTO `quanlynapthe` (`MaNapThe`, `MaNguoiDung`, `MaThanhToan`, `MaThe`, `SeriThe`, `LoaiThe`, `MenhGia`, `ThoiGian`, `Request_Id`, `TrangThai`) VALUES
+(11, 3, 'NapThe', '812133758724737', '10010571418560', 'VIETTEL', 10000, '2024-05-11 08:59:08', '77652431953', 1),
+(12, 3, 'NapThe', '714019554555122', '10010571417973', 'VIETTEL', 10000, '2024-05-11 09:09:15', '56739656821', 1);
 
 -- --------------------------------------------------------
 
@@ -484,6 +534,7 @@ INSERT INTO `quocgia` (`MaQuocGia`, `TenQuocGia`, `HinhAnh`, `KyHieu`) VALUES
 CREATE TABLE `sanpham` (
   `MaSanPham` int(11) NOT NULL,
   `TenSanPham` varchar(255) NOT NULL,
+  `HinhAnh` text NOT NULL,
   `MaQuocGia` int(11) NOT NULL,
   `GiaBan` int(11) NOT NULL,
   `MuaToiDa` int(11) NOT NULL,
@@ -499,9 +550,12 @@ CREATE TABLE `sanpham` (
 -- Dumping data for table `sanpham`
 --
 
-INSERT INTO `sanpham` (`MaSanPham`, `TenSanPham`, `MaQuocGia`, `GiaBan`, `MuaToiDa`, `MuaToiThieu`, `MaChuyenMuc`, `MoTa`, `LuuY`, `DaBan`, `TrangThai`) VALUES
-(7, 'Clone Facebook mới', 103, 150, 1000, 10, 5, 'abcd', '<p>abcd</p>', 0, 1),
-(8, 'Tài khoản Gmail Việt Nam', 101, 100, 10000, 1, 4, 'Tài khoản gmail việt nam', '<p>Lưu &yacute;</p>\r\n<p>Lưu &yacute;</p>\r\n<p>Lưu &yacute;</p>', 0, 1);
+INSERT INTO `sanpham` (`MaSanPham`, `TenSanPham`, `HinhAnh`, `MaQuocGia`, `GiaBan`, `MuaToiDa`, `MuaToiThieu`, `MaChuyenMuc`, `MoTa`, `LuuY`, `DaBan`, `TrangThai`) VALUES
+(7, 'Clone Facebook mới', '', 103, 150, 1000, 10, 4, 'abcd', '<p>abcd</p>', 0, 1),
+(8, 'Tài khoản Gmail Việt Nam', '', 101, 100, 10000, 1, 5, 'Tài khoản gmail việt nam', '<p>Lưu &yacute;</p>\r\n<p>Lưu &yacute;</p>\r\n<p>Lưu &yacute;</p>', 4, 1),
+(9, 'Tài khoản Tiktok nhiều Follow', '', 101, 60000, 100, 1, 6, 'Tài khoản Tiktok Việt Nam có nhiều Follow dành cho người bán hàng!', '<ul style=\"list-style-type: square;\">\r\n<li>Sản phẩm kh&ocirc;ng cam kết bảo h&agrave;nh</li>\r\n<li>Kh&ocirc;ng đổi trả sản phẩm</li>\r\n<li>Sản phẩm c&oacute; thể bị Tiktok kh&oacute;a</li>\r\n</ul>', 0, 1),
+(10, 'Nick Liên Minh Full Tướng, Rank Vàng', 'http://localhost/ShopAcc/uploads/__results___21_11.png', 101, 5000, 10, 1, 9, 'Nick lol rank vàng Full Tướng', '<p>ABCDEE</p>', 1, 1),
+(11, 'Tài khoản Tiktok nhiều Follow', 'http://localhost/ShopAcc/uploads/__results___21_1.png', 101, 390000, 1, 1, 6, 'ABCDE', '<p>ABCDE</p>', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -520,8 +574,10 @@ CREATE TABLE `taikhoan` (
 --
 
 INSERT INTO `taikhoan` (`MaTaiKhoan`, `MaSanPham`, `DanhSachTaiKhoan`) VALUES
-(5, 8, '100084069156608|pfskGCURviWmGfRjp|WVMGXIVIOYLFBTBNM67TN4JJ5PWJAA7S|sheridanlindall27670@hotmail.com|mC3jxyASDF'),
-(6, 7, '100076648476515|5ao3uzm4wd0|BB2LBCF4JFO4AZC2FZBY3AOG4JHIJT5V|nowaynuilu@outlook.com|xlMZaa44|12/29/1980								\r\n100084069156608|pfskGCURviWmGfRjp|WVMGXIVIOYLFBTBNM67TN4JJ5PWJAA7S|sheridanlindall27670@hotmail.com|mC3jxyeEJYKT64');
+(5, 8, '100076648476515|5ao3uzm4wd0|BB2LBCF4JFO4AZC2FZBY3AOG4JHIJT5V|nowaynuilu@outlook.com|xlMZaa44|12/29/1980								\r\n100084069156608|pfskGCURviWmGfRjp|WVMGXIVIOYLFBTBNM67TN4JJ5PWJAA7S|sheridanlindall27670@hotmail.com|mC3jxyeEJYKT64								\r\n100084047197041|prz!fbtOHz$co|7ZWXFCEUG7KTUURJXN2JNPD7TJFP4JMK|robertojansons4171979@hotmail.com|ksqUJ03ltOJE74\r\n100076648473456515|5ao3uzm42534wd0|BB2LBCF4JFO4AZC2FZBY3AOG4JHIJT5V|nowaynuilu@outlook.com|xlMZaa44|12/29/1980								\r\n100084069155436608|pfskGCURv2345iWmGfRjp|WVMGXIVIOYLFBTBNM67TN4JJ5PWJAA7S|sheridanlindall27670@hotmail.com|mC3jxyeEJYKT64								\r\n100084047345197041|prz!fbt2345OHz$co|7ZWXFCEUG7KTUURJXN2JNPD7TJFP4JMK|robertojansons4171979@hotmail.com|ksqUJ03ltOJE74'),
+(6, 7, '100076648476515|5ao3uzm4wd0|BB2LBCF4JFO4AZC2FZBY3AOG4JHIJT5V|nowaynuilu@outlook.com|xlMZaa44|12/29/1980								\r\n100084069156608|pfskGCURviWmGfRjp|WVMGXIVIOYLFBTBNM67TN4JJ5PWJAA7S|sheridanlindall27670@hotmail.com|mC3jxyeEJYKT64'),
+(7, 9, 'abcde|xyzedtl'),
+(8, 10, 'testtaikhoan|123123\r\ntesttaikhoan2|123123trtyrtyrt');
 
 -- --------------------------------------------------------
 
@@ -543,8 +599,8 @@ CREATE TABLE `thanhtoan` (
 --
 
 INSERT INTO `thanhtoan` (`MaThanhToan`, `TenThanhToan`, `Id`, `IdKey`, `LuuY`, `TrangThai`) VALUES
-('ChuyenKhoan', 'Chuyển Khoản Ví VNPAY', 'GYXR7WZP', 'GHPEWPDMWMTZVMYMBUXZCQFYFZLOLCGU', '<p>ABCD</p>', 1),
-('NapThe', 'Nạp Thẻ Cào', '7437662603', '09163a62272adfa074a54c3e261a6206', '<ol>\r\n<li>Hệ thống xử l&yacute; c&oacute; thể l&ecirc;n đến 1 ph&uacute;t, qu&yacute; kh&aacute;ch c&oacute; thể tải lại trang nếu chưa thấy cộng tiền.</li>\r\n<li>Vui l&ograve;ng gửi đ&uacute;ng mệnh gi&aacute;, sai mệnh gi&aacute; thẻ sẽ được nạp nhưng kh&ocirc;ng cộng tiền v&agrave;o t&agrave;i khoản.</li>\r\n<li>V&iacute; dụ mệnh gi&aacute; thực l&agrave; 100k, qu&yacute; kh&aacute;ch nạp 100k thực nhận 100k.</li>\r\n<li>V&iacute; dụ mệnh gi&aacute; thực l&agrave; 100k qu&yacute; kh&aacute;ch chọn mệnh gi&aacute; kh&ocirc;ng phải 100k sẽ kh&ocirc;ng được cộng tiền.</li>\r\n<li>Với c&aacute;c khuyến m&atilde;i y&ecirc;u cầu nạp tối thiểu lớn hơn 500k, qu&yacute; kh&aacute;ch vui l&ograve;ng sử dụng phương thức nạp từ ng&acirc;n h&agrave;ng để nhận khuyến m&atilde;i.</li>\r\n</ol>', 1);
+('ChuyenKhoan', 'Chuyển Khoản Ví VNPAY', '7BS0D3T7', 'UGNJPEYXVIGCYERQUSOFDILLQHUKUDNZ', '<p>ABCD</p>', 1),
+('NapThe', 'Nạp Thẻ Cào', '4745109542', '6fd49f193fd872743712a2a2e97290a8', '<ol>\r\n<li>Hệ thống xử l&yacute; c&oacute; thể l&ecirc;n đến 1 ph&uacute;t, qu&yacute; kh&aacute;ch c&oacute; thể tải lại trang nếu chưa thấy cộng tiền.</li>\r\n<li>Vui l&ograve;ng gửi đ&uacute;ng mệnh gi&aacute;, sai mệnh gi&aacute; thẻ sẽ được nạp nhưng kh&ocirc;ng cộng tiền v&agrave;o t&agrave;i khoản.</li>\r\n<li>V&iacute; dụ mệnh gi&aacute; thực l&agrave; 100k, qu&yacute; kh&aacute;ch nạp 100k thực nhận 100k.</li>\r\n<li>V&iacute; dụ mệnh gi&aacute; thực l&agrave; 100k qu&yacute; kh&aacute;ch chọn mệnh gi&aacute; kh&ocirc;ng phải 100k sẽ kh&ocirc;ng được cộng tiền.</li>\r\n<li>Với c&aacute;c khuyến m&atilde;i y&ecirc;u cầu nạp tối thiểu lớn hơn 500k, qu&yacute; kh&aacute;ch vui l&ograve;ng sử dụng phương thức nạp từ ng&acirc;n h&agrave;ng để nhận khuyến m&atilde;i.</li>\r\n</ol>', 1);
 
 -- --------------------------------------------------------
 
@@ -559,6 +615,14 @@ CREATE TABLE `vitien` (
   `DaSuDung` int(11) NOT NULL,
   `TongNap` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `vitien`
+--
+
+INSERT INTO `vitien` (`MaViTien`, `MaNguoiDung`, `SoDuKhaDung`, `DaSuDung`, `TongNap`) VALUES
+(7, 2, 4700, 5300, 10000),
+(8, 3, 45250, 100, 45350);
 
 --
 -- Indexes for dumped tables
@@ -665,19 +729,19 @@ ALTER TABLE `vitien`
 -- AUTO_INCREMENT for table `chuyenmuc`
 --
 ALTER TABLE `chuyenmuc`
-  MODIFY `MaChuyenMuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `MaChuyenMuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `dongtien`
 --
 ALTER TABLE `dongtien`
-  MODIFY `MaDongTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `MaDongTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `MaDonHang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `MaDonHang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `khuyenmai`
@@ -689,7 +753,7 @@ ALTER TABLE `khuyenmai`
 -- AUTO_INCREMENT for table `lichsumua`
 --
 ALTER TABLE `lichsumua`
-  MODIFY `MaLichSuMua` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `MaLichSuMua` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `nguoidung`
@@ -701,13 +765,13 @@ ALTER TABLE `nguoidung`
 -- AUTO_INCREMENT for table `quanlychuyenkhoan`
 --
 ALTER TABLE `quanlychuyenkhoan`
-  MODIFY `MaChuyenKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `MaChuyenKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `quanlynapthe`
 --
 ALTER TABLE `quanlynapthe`
-  MODIFY `MaNapThe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `MaNapThe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `quocgia`
@@ -719,19 +783,19 @@ ALTER TABLE `quocgia`
 -- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `MaSanPham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `MaSanPham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `MaTaiKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `MaTaiKhoan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `vitien`
 --
 ALTER TABLE `vitien`
-  MODIFY `MaViTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `MaViTien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

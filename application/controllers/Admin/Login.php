@@ -5,7 +5,7 @@ class Login extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		if($this->session->has_userdata('username')){
+		if($this->session->has_userdata('admin')){
 			return redirect(base_url('admin/'));
 		}
 		$data = array();
@@ -40,6 +40,7 @@ class Login extends CI_Controller {
 				    'phone' => $this->Model_Login->getInfoByUsername($taikhoan)[0]['SoDienThoai'],
 				    'email' => $this->Model_Login->getInfoByUsername($taikhoan)[0]['Email'],
 				    'jointime' => $this->Model_Login->getInfoByUsername($taikhoan)[0]['NgayThamGia'],
+					'admin' => True
 				);
 				$this->session->set_userdata($newdata);
 				$this->session->set_flashdata('success', 'Đăng nhập thành công!');

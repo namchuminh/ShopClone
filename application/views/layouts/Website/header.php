@@ -44,33 +44,14 @@
                     <li class="active"><a href="<?php echo base_url(); ?>"><i class="ti-home"></i>Trang Chủ </a>
                     </li>
 
-                    <li class="label">Nguyên Liệu</li>
+                    <li class="label">Tài Khoản</li>
 
-                    <li>
-                        <?php if(count($category) >= 1){ ?>
-                            <a class="sidebar-sub-toggle"><i class="ti-layout-column3"></i>Thể Loại <span class="sidebar-collapse-icon ti-angle-down"></span></a>
-                            <ul>
-                                <?php foreach ($category as $key => $value): ?>
-                                    <li><a href="<?php echo base_url('chuyen-muc/'.$value['MaChuyenMuc'].'/'); ?>"><?php echo $value['TenChuyenMuc']; ?></a></li>
-                                <?php endforeach ?>
-                            </ul>
-                        <?php }else{ ?>
-                            <a class="sidebar-sub-toggle"><i class="ti-layout-column3"></i>Chuyên Mục</a>
-                        <?php } ?>
-                    </li>
-
-                    <li><a class="sidebar-sub-toggle"><i class="ti-view-list"></i>Sản Phẩm <span class="sidebar-collapse-icon ti-angle-down"></span></a>
-                        <?php if(count($product) >= 1){ ?>
-                            <ul>
-                                <?php foreach ($product as $key => $value): ?>
-                                    <li><a href="<?php echo base_url('san-pham/'.$value['MaSanPham'].'/'); ?>"><?php echo $value['TenSanPham']; ?></a></li>
-                                <?php endforeach ?>
-                            </ul>
-                        <?php }else{ ?>
-                            <a class="sidebar-sub-toggle"><i class="ti-view-list"></i>Sản Phẩm</a>
-                        <?php } ?>
-                    </li>
-
+                    <?php if(count($category) >= 1){ ?>
+                        <?php foreach ($category as $key => $value): ?>
+                            <li style="justify-content: center;"><a href="<?php echo base_url('chuyen-muc/'.$value['MaChuyenMuc'].'/'); ?>"><img style="width: 20px; height: 20px;" class="card-img-top" src="<?php echo $value['HinhAnh']; ?>"> <?php echo $value['TenChuyenMuc']; ?></a></li>
+                        <?php endforeach ?>
+                    <?php } ?>
+            
                     <?php if(isset($_SESSION['user'])){ ?>
                         <li class="label">Nạp Tiền</li>
                         <li><a href="<?php echo base_url('nap-tien-the/'); ?>" title="Nạp Từ Thẻ"><i class="ti-layers-alt"></i> Nạp Từ Thẻ</a></li>

@@ -43,6 +43,10 @@
                             <input type="text" class="form-control" placeholder="Tên Sản Phẩm *" name="tensanpham">
                         </div>
                         <div class="form-group">
+                            <label>Hình Ảnh</label>
+                            <input type="file" class="form-control" name="hinhanh" required>
+                        </div>
+                        <div class="form-group">
                             <label>Quốc Gia</label>
                             <select class="form-control" name="maquocgia">
                                 <?php foreach ($country as $key => $value): ?>

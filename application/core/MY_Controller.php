@@ -13,7 +13,12 @@ class MY_Controller extends CI_Controller {
         $this->load->model('Website/Model_Category');
         $this->load->model('Website/Model_Product');
         $current_url = $this->uri->uri_string();
-        if(($current_url != "") && ($current_url != "top-nap-tien") && ($current_url != "chinh-sach") && ($current_url != "lien-he")){
+
+
+        $parts = explode("/", $current_url);
+        $parts_url = $parts[0];
+
+        if(($current_url != "") && ($current_url != "top-nap-tien") && ($current_url != "chinh-sach") && ($current_url != "lien-he") && ($parts_url != "chuyen-muc") && ($parts_url != "san-pham")){
             if(!$this->session->has_userdata('login')){
                 $this->session->set_flashdata('error', "Vui lòng đăng nhập để thực hiện!");
                 return redirect(base_url('dang-nhap/'));
@@ -28,12 +33,19 @@ class MY_Controller extends CI_Controller {
                 $this->getWalletUser($this->session->userdata('user'));
             }
         }
+
+        //Kiểm tra session không có excess thì xóa toàn bộ session
+        if($this->session->has_userdata('admin')){
+		    $this->session->sess_destroy();
+        }
+
         $this->checkPay();
         $this->data['product'] = $this->Model_Product->getAll();
         $this->data['category'] = $this->Model_Category->getAll();
         $this->data['history'] = $this->Model_Order->getHistory();
         $this->data['config'] = $this->Model_Website->getAllConfig();
         $this->load->vars($this->data);
+
     }
 
     private function curl_get($url)

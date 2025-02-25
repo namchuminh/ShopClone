@@ -5,7 +5,8 @@ class Product extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		if(!$this->session->has_userdata('username')){
+		if(!$this->session->has_userdata('admin')){
+			$this->session->sess_destroy();
 			return redirect(base_url('admin/dang-nhap/'));
 		}
 		$this->load->model('Admin/Model_Product');
@@ -34,6 +35,7 @@ class Product extends CI_Controller {
 			$machuyenmuc = $this->input->post('machuyenmuc');
 			$mota = $this->input->post('mota');
 			$luuy = $this->input->post('luuy');
+			$hinhanh = "";
 
 			if(empty($tensanpham) || empty($mota) || empty($luuy)){
 				$data['error'] = "Vui lòng nhập đủ thông tin sản phẩm!";
@@ -65,7 +67,20 @@ class Product extends CI_Controller {
 				return $this->load->view('Admin/Product/View_AddProduct', $data);
 			}
 
-			$this->Model_Product->add($tensanpham,$maquocgia,$giaban,$muatoida,$muatoithieu,$machuyenmuc,$mota,$luuy);
+			$config['upload_path'] = './uploads/';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg';
+
+			$this->load->library('upload', $config);
+
+			if ($this->upload->do_upload('hinhanh')){
+				$img = $this->upload->data();
+				$hinhanh = base_url('uploads')."/".$img['file_name'];
+			}else{
+				$data['error'] = "Vui lòng chọn hình ảnh sản phẩm!";
+				return $this->load->view('Admin/Product/View_AddProduct', $data);
+			}
+
+			$this->Model_Product->add($tensanpham,$hinhanh,$maquocgia,$giaban,$muatoida,$muatoithieu,$machuyenmuc,$mota,$luuy);
 
 			$this->session->set_flashdata('success', 'Thêm sản phẩm thành công!');
 			return redirect(base_url('admin/san-pham/'));
@@ -133,6 +148,18 @@ class Product extends CI_Controller {
 
 			$this->Model_Product->updateById($tensanpham,$maquocgia,$giaban,$muatoida,$muatoithieu,$machuyenmuc,$mota,$luuy,$trangthai,$MaSanPham);
 
+			$config['upload_path'] = './uploads/';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg';
+			
+			$this->load->library('upload', $config);
+
+			if ($this->upload->do_upload('hinhanh')){
+				$img = $this->upload->data();
+				$hinhanh = base_url('uploads')."/".$img['file_name'];
+
+				$this->Model_Product->updateImage($hinhanh, $MaSanPham);
+			}
+
 			$data['detail'] = $this->Model_Product->getById($MaSanPham);
 			$data['success'] = "Cập nhật sản phẩm thành công!";
 			return $this->load->view('Admin/Product/View_UpdateProduct', $data);
@@ -171,7 +198,7 @@ class Product extends CI_Controller {
 			return redirect(base_url('admin/san-pham/'));
 		}
 
-		$data['title'] = "Nhập Clone vào sản phẩm";
+		$data['title'] = "Nhập tài khoản vào sản phẩm";
 		$data['detail'] = $this->Model_Product->getById($MaSanPham);
 		if ($this->input->server('REQUEST_METHOD') === 'POST') {
 			$danhsachtaikhoan = trim($this->input->post('danhsach'));
@@ -186,7 +213,7 @@ class Product extends CI_Controller {
 				$this->Model_Product->importClone($danhsach, $MaSanPham);
 			}
 
-			$data['success'] = "Thêm danh sách Clone thành công!";
+			$data['success'] = "Thêm danh sách tài khoản thành công!";
 			return $this->load->view('Admin/Product/View_ImportClone', $data);
 		}
 		return $this->load->view('Admin/Product/View_ImportClone', $data);
@@ -198,7 +225,7 @@ class Product extends CI_Controller {
 		}
 
 		if(count($this->Model_Product->getAllCloneById($MaSanPham)) < 1){
-			$this->session->set_flashdata('error', 'Vui lòng thêm Clone trước khi thực hiện!');
+			$this->session->set_flashdata('error', 'Vui lòng thêm tài khoản trước khi thực hiện!');
 			return redirect(base_url('admin/san-pham/'));
 		}
 

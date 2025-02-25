@@ -11,7 +11,7 @@ class Model_Product extends CI_Model {
 	}
 
 	public function getAll(){
-		$sql = "SELECT sanpham.*, quocgia.*, chuyenmuc.TenChuyenMuc, chuyenmuc.MaChuyenMuc FROM sanpham,quocgia,chuyenmuc WHERE sanpham.MaChuyenMuc = chuyenmuc.MaChuyenMuc AND sanpham.MaQuocGia = quocgia.MaQuocGia ORDER BY MaSanPham DESC";
+		$sql = "SELECT sanpham.*, quocgia.*, chuyenmuc.TenChuyenMuc, chuyenmuc.MaChuyenMuc, chuyenmuc.HinhAnh FROM sanpham,quocgia,chuyenmuc WHERE sanpham.MaChuyenMuc = chuyenmuc.MaChuyenMuc AND sanpham.MaQuocGia = quocgia.MaQuocGia ORDER BY MaSanPham DESC";
 		$result = $this->db->query($sql);
 		return $result->result_array();
 	}
@@ -29,9 +29,9 @@ class Model_Product extends CI_Model {
 		return $result->result_array();
 	}
 
-	public function add($tensanpham,$maquocgia,$giaban,$muatoida,$muatoithieu,$machuyenmuc,$mota,$luuy){
-		$sql = "INSERT INTO `sanpham`(`Tensanpham`, `maquocgia`, `giaban`,`muatoida`,`muatoithieu`,`machuyenmuc`,`mota`,`luuy`,`daban`,`trangthai`) VALUES (?,?,?,?,?,?,?,?,?,?)";
-		$result = $this->db->query($sql,array($tensanpham,$maquocgia,$giaban,$muatoida,$muatoithieu,$machuyenmuc,$mota,$luuy,0,1));
+	public function add($tensanpham,$hinhanh,$maquocgia,$giaban,$muatoida,$muatoithieu,$machuyenmuc,$mota,$luuy){
+		$sql = "INSERT INTO `sanpham`(`Tensanpham`, `HinhAnh`, `maquocgia`, `giaban`,`muatoida`,`muatoithieu`,`machuyenmuc`,`mota`,`luuy`,`daban`,`trangthai`) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+		$result = $this->db->query($sql,array($tensanpham,$hinhanh,$maquocgia,$giaban,$muatoida,$muatoithieu,$machuyenmuc,$mota,$luuy,0,1));
 		return $result;
 	}
 
@@ -88,6 +88,12 @@ class Model_Product extends CI_Model {
 	public function importClone($danhsach,$MaSanPham){
 		$sql = "UPDATE `taikhoan` SET `DanhSachTaiKhoan`=? WHERE `MaSanPham`=?";
 		$result = $this->db->query($sql, array($danhsach,$MaSanPham));
+		return $result;
+	}
+
+	public function updateImage($hinhanh, $MaSanPham){
+		$sql = "UPDATE `sanpham` SET `HinhAnh`=? WHERE `MaSanPham`=?";
+		$result = $this->db->query($sql, array($hinhanh,$MaSanPham));
 		return $result;
 	}
 }

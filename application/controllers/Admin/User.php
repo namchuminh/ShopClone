@@ -5,7 +5,8 @@ class User extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		if(!$this->session->has_userdata('username')){
+		if(!$this->session->has_userdata('admin')){
+			$this->session->sess_destroy();
 			return redirect(base_url('admin/dang-nhap/'));
 		}
 		$this->load->model('Admin/Model_User');

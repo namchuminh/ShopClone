@@ -3,74 +3,38 @@
 <div class="row">
     <div class="col-lg-9">
 		<?php if(count($product) >= 1){ ?>
+            <?php $hinhanh = $categoryProduct[0]['HinhAnh']; ?>
 	    	<div class="row">
 	    		<div class="col-lg-12">
 		    		<div class="page-header">
-			            <div class="page-title">
-			                <h1><?php echo $categoryProduct[0]['TenChuyenMuc']; ?></h1>
+			            <div class="page-title" style="display: flex; justify-content: center;">
+			                <h1><img style="width: 25px; height: 25px;" class="card-img-top" src="<?php echo $hinhanh; ?>"> <?php echo $categoryProduct[0]['TenChuyenMuc']; ?></h1>
 			            </div>
 			        </div>
-			        <div class="card alert">
-			            <div class="card-body">
-			                <div class="table-responsive">
-			                    <table class="table table-bordered">
-			                        <thead>
-			                            <tr>
-			                                <th>#</th>
-			                                <th>Tên Sản Phẩm</th>
-			                                <th>Quốc Gia</th>
-			                                <th>Mua Tối Thiểu</th>
-			                                <th>Hiện Có</th>
-			                                <th>Đã Bán</th>
-			                                <th>Đơn Giá</th>
-			                                <th>Thao Tác</th>
-			                            </tr>
-			                        </thead>
-			                        <tbody>
-			                        	<?php foreach ($productCategory as $key => $value): ?>
-			                        		<tr>
-				                                <th scope="row"><?php echo $key + 1; ?></th>
-				                                <td><?php echo $value['TenSanPham']; ?></td>
-				                                <td>
-				                                	<?php 
-				                                		if(count($this->Model_Product->getNation($value['MaQuocGia'])) >= 1){
-				                                			echo $this->Model_Product->getNation($value['MaQuocGia'])[0]['TenQuocGia'];
-				                                		}else{
-				                                			echo "Không xác định!";
-				                                		}
-				                                	?>
-				                                		
-				                                </td>
-				                                <td>
-				                                	<span class="badge badge-danger">
-				                                		<?php echo $value['MuaToiThieu']; ?> tài khoản / 1 lần
-				                                	</span>
-				                                </td>
-				                                <td>
-				                                	<span class="badge badge-primary">
-				                                		<?php echo $this->Model_Product->getNumberProduct($value['MaSanPham']); ?> tài khoản
-				                                	</span>
-				                            	</td>
-				                                <td>
-				                                	<span class="badge badge-warning">
-				                                		<?php echo $value['DaBan']; ?> tài khoản
-				                                	</span>
-				                                </td>
-				                                <td class="color-primary"><?php echo number_format($value['GiaBan']); ?>đ / 1 tài khoản</td>
-				                                <td>
-				                                	<?php if($this->Model_Product->getNumberProduct($value['MaSanPham']) >= $value['MuaToiThieu']){ ?>
-				                                		<a href="<?php echo base_url('san-pham/'.$value['MaSanPham'].'/') ?>" class="btn btn-primary">Mua Ngay</a>
-				                                	<?php }else{ ?>
-				                                		<a href="<?php echo base_url('san-pham/'.$value['MaSanPham'].'/') ?>" class="btn btn-success">Hết Hàng</a>
-				                                	<?php } ?>
-				                                </td>
-				                            </tr>
-			                        	<?php endforeach ?>
-			                        </tbody>
-			                    </table>
-			                </div>
-			            </div>
-			        </div>
+			        <div class="row">
+                        <?php foreach ($productCategory as $key => $product): ?>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="card">
+                                    <img style="width: 100%; height: 200px;" class="card-img-top" src="<?php echo empty($product['HinhAnh']) ? $hinhanh : $product['HinhAnh']; ?>" alt="<?php echo $product['TenSanPham']; ?>">
+                                    <hr>
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="line-height: 30px;"> 
+                                            <a href="<?php echo base_url('san-pham/'.$product['MaSanPham'].'/'); ?>"><?php echo $product['TenSanPham']; ?> </a>
+                                        </h4>
+                                        <p class="card-text">Mua tối thiểu: <span class="badge badge-danger"><?php echo $product['MuaToiThieu']; ?> tài khoản</span></p>
+                                        <p class="card-text">Hiện có: <span class="badge badge-primary"><?php echo $this->Model_Product->getNumberProduct($product['MaSanPham']); ?> tài khoản</span></p>
+                                        <p class="card-text">Đã bán: <span class="badge badge-warning"><?php echo $product['DaBan']; ?> tài khoản</span></p>
+                                    </div>
+                                    <hr>
+                                    <div class="card-footer">
+                                        <a href="<?php echo base_url('san-pham/'.$product['MaSanPham'].'/'); ?>" class="w-100 btn <?php echo ($this->Model_Product->getNumberProduct($product['MaSanPham']) >= $product['MuaToiThieu']) ? 'btn-primary' : 'btn-success'; ?>">
+                                        <?php echo ($this->Model_Product->getNumberProduct($product['MaSanPham']) >= $product['MuaToiThieu']) ? number_format($product['GiaBan']) . ' đ / 1 tài khoản' : 'Hết Hàng'; ?>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach ?>
+                    </div>
 
 	    		</div>
 	    	</div>
@@ -79,7 +43,7 @@
     <!-- /# column -->
     <div class="col-lg-3">
        <div class="page-header">
-            <div class="page-title">
+            <div class="page-title" style="display: flex; justify-content: center;">
                 <h1>Giao Dịch Gần Đây</h1>
             </div>
         </div>
